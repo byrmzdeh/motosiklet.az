@@ -1,68 +1,156 @@
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function () {
   //select option
-const dropdown = document.querySelector(".dropdown");
-const dropdownButton = document.querySelector(".dropdown-button");
-const dropdownText = document.querySelector(".dropdown-text");
-const dropdownMenu = document.querySelector(".dropdown-menu");
+  const dropdown = document.querySelector(".dropdown");
+  const dropdownButton = document.querySelector(".dropdown-button");
+  const dropdownText = document.querySelector(".dropdown-text");
+  const dropdownMenu = document.querySelector(".dropdown-menu");
 
-let currentText = "Az"; 
+  let currentText = "Az";
 
-dropdownButton.addEventListener("click", () => {
-  dropdown.classList.toggle("open");
-});
+  dropdownButton.addEventListener("click", () => {
+    dropdown.classList.toggle("open");
+  });
 
-dropdownMenu.addEventListener("click", (event) => {
-  const clickedItem = event.target;
+  dropdownMenu.addEventListener("click", (event) => {
+    const clickedItem = event.target;
 
-  if (clickedItem.tagName === "LI") {
-    const newText = clickedItem.textContent;
-    dropdownText.textContent = newText;
+    if (clickedItem.tagName === "LI") {
+      const newText = clickedItem.textContent;
+      dropdownText.textContent = newText;
 
-    const newListItem = document.createElement("li");
-    newListItem.textContent = currentText;
-    newListItem.setAttribute("data-value", currentText);
+      const newListItem = document.createElement("li");
+      newListItem.textContent = currentText;
+      newListItem.setAttribute("data-value", currentText);
 
-    currentText = newText;
-    clickedItem.remove();
-    dropdownMenu.appendChild(newListItem);
-    dropdown.classList.remove("open");
-  }
-});
+      currentText = newText;
+      clickedItem.remove();
+      dropdownMenu.appendChild(newListItem);
+      dropdown.classList.remove("open");
+    }
+  });
 
-document.addEventListener("click", (event) => {
-  if (!dropdown.contains(event.target)) {
-    dropdown.classList.remove("open");
-  }
-});
+  document.addEventListener("click", (event) => {
+    if (!dropdown.contains(event.target)) {
+      dropdown.classList.remove("open");
+    }
+  });
 
 
 
-//language Button
-const selectButtons=document.querySelectorAll('#select-buttons button')
-let activeButton = document.querySelector('#select-buttons button.active')
-selectButtons.forEach(button=>{
+  //language Button
+  const selectButtons = document.querySelectorAll('#select-buttons button')
+  let activeButton = document.querySelector('#select-buttons button.active')
+  selectButtons.forEach(button => {
     button.addEventListener('click', function () {
-        if (activeButton) {
-            activeButton.classList.remove('active')  
-        }
+      if (activeButton) {
+        activeButton.classList.remove('active')
+      }
 
-        button.classList.add('active')
-        activeButton=button
-        
+      button.classList.add('active')
+      activeButton = button
+
     })
-})
+  })
 
-const closeIcon = document.getElementById("close")
-const barMenu = document.getElementById('barMenu')
-const barIcon = document.getElementById("barIcon")
+  //barMenu
 
-barIcon.addEventListener('click', function () {
-  barMenu.style.display='block'
+  const closeIcon = document.getElementById("close")
+  const barMenu = document.getElementById('barMenu')
+  const barIcon = document.getElementById("barIcon")
+  const header = document.getElementById('header')
+
+  barIcon.addEventListener('click', function () {
+    barMenu.style.display = 'block';
+    header.style.display='none'
+
+  })
+
+  closeIcon.addEventListener('click', function () {
+    barMenu.style.display = 'none';
+    header.style.display='flex'
+
+
+  })
+
+  //more filter
+  const readMoreFilter = document.getElementById('more');
+  const openFilter = document.querySelector(".selects-open");
+
+  let isFilterOpen = false;
+
+  readMoreFilter.addEventListener('click', function () {
+    if (isFilterOpen) {
+      openFilter.style.height = '0';
+      openFilter.style.opacity = '0';
+      readMoreFilter.textContent = 'Daha çox filter';
+
+    } else {
+      openFilter.style.height = 'auto';
+      openFilter.style.opacity = '1';
+      readMoreFilter.textContent = 'Daha az filter';
+    }
+    isFilterOpen=!isFilterOpen
+
+  });
+
+
+  //Search
+  const show = document.querySelector('.show');
+  const searchDiv = document.getElementById('searchDiv');
+  const searchButton = document.querySelector('.search'); 
+  const closeButton = document.getElementById('closeSearch'); 
+
+  const view = document.querySelector('.view');
+  const searchButtonRes= document.querySelector('.searchIcon'); 
   
-})
 
-closeIcon.addEventListener('click', function(){
-  barMenu.style.display='none'
-})
+  searchButton.addEventListener('click', function (event) {
+    event.stopPropagation(); // Hadisənin qabarmasını dayandırır
+    searchDiv.style.display = 'block'; 
+    show.style.opacity = '0';
+
+  });
+
+  closeButton.addEventListener('click', function () {
+    searchDiv.style.display = 'none'; 
+    show.style.opacity = '1';
+
+  });
+
+  searchButtonRes.addEventListener('click', function () {
+    searchDiv.style.display = 'block'; 
+    show.style.opacity = '1';
+
+  });  
+
+  // closeButton.addEventListener('click', function () {
+  //   searchDiv.style.display = 'none'; 
+  //   view.style.display = 'flex';
+  // });
+
+
+
+
+  // //search
+  // const searchIcon = document.getElementById('search-icon')
+  // const searchInput = document.getElementById('search-input')
+  // const show= document.getElementById('show')
+  // const close= document.getElementById('close')
+
+  // searchIcon.addEventListener('click', function(){
+  //   show.style.display='none'
+  //   searchInput.style.display='block'
+  // })
+
+  // close.addEventListener('click', function(){
+  //   show.style.display='flex'
+  //   searchInput.style.display='none'
+  // })
+
+
+
+
+
+
 
 })

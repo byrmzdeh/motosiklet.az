@@ -1,0 +1,457 @@
+[
+    {
+        "id":0,
+        "img":{
+            "img1":"/src/assets/image/home/motoOne.png",
+            "img2":"/src/assets/image/home/motoTwo.png"
+        },
+        "name":"Honda CB 125",
+        "type":"Sport bike",
+        "year":2023,
+        "liter":0.3,
+        "kilometer":5.000,
+        "price":7500
+    },
+    {
+        "id":1,
+        "img":{
+            "img1":"/src/assets/image/home/motoOne.png",
+            "img2":"/src/assets/image/home/motoTwo.png"
+        },
+        "name":"Honda CB 125",
+        "type":"Sport bike",
+        "year":2024,
+        "liter":0.4,
+        "kilometer":5.000,
+        "price":7800
+    },
+    {
+        "id":2,
+        "img":{
+            "img1":"/src/assets/image/home/motoOne.png",
+            "img2":"/src/assets/image/home/motoTwo.png"
+        },
+        "name":"Honda CB 125",
+        "type":"Sport bike",
+        "year":2023,
+        "liter":0.3,
+        "kilometer":5.000,
+        "price":7500
+    },
+    {
+        "id":3,
+        "img":{
+            "img1":"/src/assets/image/home/motoOne.png",
+            "img2":"/src/assets/image/home/motoTwo.png"
+        },
+        "name":"Honda CB 125",
+        "type":"Sport bike",
+        "year":2023,
+        "liter":0.3,
+        "kilometer":5.000,
+        "price":7500
+    },
+    {
+        "id":4,
+        "img":{
+            "img1":"/src/assets/image/home/motoOne.png",
+            "img2":"/src/assets/image/home/motoTwo.png"
+        },
+        "name":"Honda CB 125",
+        "type":"Sport bike",
+        "year":2023,
+        "liter":0.3,
+        "kilometer":5.000,
+        "price":7500
+    },
+    {
+        "id":5,
+        "img":{
+            "img1":"/src/assets/image/home/motoOne.png",
+            "img2":"/src/assets/image/home/motoTwo.png"
+        },
+        "name":"Honda CB 125",
+        "type":"Sport bike",
+        "year":2023,
+        "liter":0.3,
+        "kilometer":5.000,
+        "price":7500
+    },
+    {
+        "id":6,
+        "img":{
+            "img1":"/src/assets/image/home/motoOne.png",
+            "img2":"/src/assets/image/home/motoTwo.png"
+        },
+        "name":"Honda CB 125",
+        "type":"Sport bike",
+        "year":2023,
+        "liter":0.3,
+        "kilometer":5.000,
+        "price":7500
+    },
+    {
+        "id":7,
+        "img":{
+            "img1":"/src/assets/image/home/motoOne.png",
+            "img2":"/src/assets/image/home/motoTwo.png"
+        },
+        "name":"Honda CB 125",
+        "type":"Sport bike",
+        "year":2023,
+        "liter":0.3,
+        "kilometer":5.000,
+        "price":7500
+    },
+    {
+        "id":8,
+        "img":{
+            "img1":"/src/assets/image/home/motoOne.png",
+            "img2":"/src/assets/image/home/motoTwo.png"
+        },
+        "name":"Honda CB 125",
+        "type":"Sport bike",
+        "year":2023,
+        "liter":0.3,
+        "kilometer":5.000,
+        "price":7500
+    },
+    {
+        "id":9,
+        "img":{
+            "img1":"/src/assets/image/home/motoOne.png",
+            "img2":"/src/assets/image/home/motoTwo.png"
+        },
+        "name":"Honda CB 125",
+        "type":"Sport bike",
+        "year":2023,
+        "liter":0.3,
+        "kilometer":5.000,
+        "price":7500
+    },
+    {
+        "id":10,
+        "img":{
+            "img1":"/src/assets/image/home/motoOne.png",
+            "img2":"/src/assets/image/home/motoTwo.png"
+        },
+        "name":"Honda CB 125",
+        "type":"Sport bike",
+        "year":2023,
+        "liter":0.3,
+        "kilometer":5.000,
+        "price":7500
+    },
+    {
+        "id":11,
+        "img":{
+            "img1":"/src/assets/image/home/motoOne.png",
+            "img2":"/src/assets/image/home/motoTwo.png"
+        },
+        "name":"Honda CB 125",
+        "type":"Sport bike",
+        "year":2023,
+        "liter":0.3,
+        "kilometer":5.000,
+        "price":7500
+    },
+    {
+        "id":12,
+        "img":{
+            "img1":"/src/assets/image/home/motoOne.png",
+            "img2":"/src/assets/image/home/motoTwo.png"
+        },
+        "name":"Honda CB 125",
+        "type":"Sport bike",
+        "year":2023,
+        "liter":0.3,
+        "kilometer":5.000,
+        "price":7500
+    }, 
+    {
+        "id":13,
+        "img":{
+            "img1":"/src/assets/image/home/motoOne.png",
+            "img2":"/src/assets/image/home/motoTwo.png"
+        },
+        "name":"Honda CB 125",
+        "type":"Sport bike",
+        "year":2023,
+        "liter":0.3,
+        "kilometer":5.000,
+        "price":7500
+    }, 
+    {
+        "id":14,
+        "img":{
+            "img1":"/src/assets/image/home/motoOne.png",
+            "img2":"/src/assets/image/home/motoTwo.png"
+        },
+        "name":"Honda CB 125",
+        "type":"Sport bike",
+        "year":2023,
+        "liter":0.3,
+        "kilometer":5.000,
+        "price":7500
+    },
+     {
+        "id":15,
+        "img":{
+            "img1":"/src/assets/image/home/motoOne.png",
+            "img2":"/src/assets/image/home/motoTwo.png"
+        },
+        "name":"Honda CB 125",
+        "type":"Sport bike",
+        "year":2023,
+        "liter":0.3,
+        "kilometer":5.000,
+        "price":7500
+    }, 
+    {
+        "id":16,
+        "img":{
+            "img1":"/src/assets/image/home/motoOne.png",
+            "img2":"/src/assets/image/home/motoTwo.png"
+        },
+        "name":"Honda CB 125",
+        "type":"Sport bike",
+        "year":2023,
+        "liter":0.3,
+        "kilometer":5.000,
+        "price":7500
+    },
+     {
+        "id":17,
+        "img":{
+            "img1":"/src/assets/image/home/motoOne.png",
+            "img2":"/src/assets/image/home/motoTwo.png"
+        },
+        "name":"Honda CB 125",
+        "type":"Sport bike",
+        "year":2023,
+        "liter":0.3,
+        "kilometer":5.000,
+        "price":7500
+    }, 
+    {
+        "id":18,
+        "img":{
+            "img1":"/src/assets/image/home/motoOne.png",
+            "img2":"/src/assets/image/home/motoTwo.png"
+        },
+        "name":"Honda CB 125",
+        "type":"Sport bike",
+        "year":2023,
+        "liter":0.3,
+        "kilometer":5.000,
+        "price":7500
+    }, 
+    {
+        "id":19,
+        "img":{
+            "img1":"/src/assets/image/home/motoOne.png",
+            "img2":"/src/assets/image/home/motoTwo.png"
+        },
+        "name":"Honda CB 125",
+        "type":"Sport bike",
+        "year":2023,
+        "liter":0.3,
+        "kilometer":5.000,
+        "price":7500
+    },
+     {
+        "id":20,
+        "img":{
+            "img1":"/src/assets/image/home/motoOne.png",
+            "img2":"/src/assets/image/home/motoTwo.png"
+        },
+        "name":"Honda CB 125",
+        "type":"Sport bike",
+        "year":2023,
+        "liter":0.3,
+        "kilometer":5.000,
+        "price":7500
+    },
+     {
+        "id":21,
+        "img":{
+            "img1":"/src/assets/image/home/motoOne.png",
+            "img2":"/src/assets/image/home/motoTwo.png"
+        },
+        "name":"Honda CB 125",
+        "type":"Sport bike",
+        "year":2023,
+        "liter":0.3,
+        "kilometer":5.000,
+        "price":7500
+    }, 
+    {
+        "id":22,
+        "img":{
+            "img1":"/src/assets/image/home/motoOne.png",
+            "img2":"/src/assets/image/home/motoTwo.png"
+        },
+        "name":"Honda CB 125",
+        "type":"Sport bike",
+        "year":2023,
+        "liter":0.3,
+        "kilometer":5.000,
+        "price":7500
+    }, 
+    {
+        "id":23,
+        "img":{
+            "img1":"/src/assets/image/home/motoOne.png",
+            "img2":"/src/assets/image/home/motoTwo.png"
+        },
+        "name":"Honda CB 125",
+        "type":"Sport bike",
+        "year":2023,
+        "liter":0.3,
+        "kilometer":5.000,
+        "price":7500
+    } ,
+    {
+        "id":24,
+        "img":{
+            "img1":"/src/assets/image/home/motoOne.png",
+            "img2":"/src/assets/image/home/motoTwo.png"
+        },
+        "name":"Honda CB 125",
+        "type":"Sport bike",
+        "year":2023,
+        "liter":0.3,
+        "kilometer":5.000,
+        "price":7500
+    },
+    {
+        "id":25,
+        "img":{
+            "img1":"/src/assets/image/home/motoOne.png",
+            "img2":"/src/assets/image/home/motoTwo.png"
+        },
+        "name":"Honda CB 125",
+        "type":"Sport bike",
+        "year":2023,
+        "liter":0.3,
+        "kilometer":5.000,
+        "price":7500
+    },
+    {
+        "id":26,
+        "img":{
+            "img1":"/src/assets/image/home/motoOne.png",
+            "img2":"/src/assets/image/home/motoTwo.png"
+        },
+        "name":"Honda CB 125",
+        "type":"Sport bike",
+        "year":2023,
+        "liter":0.3,
+        "kilometer":5.000,
+        "price":7500
+    },
+    {
+        "id":27,
+        "img":{
+            "img1":"/src/assets/image/home/motoOne.png",
+            "img2":"/src/assets/image/home/motoTwo.png"
+        },
+        "name":"Honda CB 125",
+        "type":"Sport bike",
+        "year":2023,
+        "liter":0.3,
+        "kilometer":5.000,
+        "price":7500
+    },
+    {
+        "id":28,
+        "img":{
+            "img1":"/src/assets/image/home/motoOne.png",
+            "img2":"/src/assets/image/home/motoTwo.png"
+        },
+        "name":"Honda CB 125",
+        "type":"Sport bike",
+        "year":2023,
+        "liter":0.3,
+        "kilometer":5.000,
+        "price":7500
+    },
+    {
+        "id":29,
+        "img":{
+            "img1":"/src/assets/image/home/motoOne.png",
+            "img2":"/src/assets/image/home/motoTwo.png"
+        },
+        "name":"Honda CB 125",
+        "type":"Sport bike",
+        "year":2023,
+        "liter":0.3,
+        "kilometer":5.000,
+        "price":7500
+    },
+    {
+        "id":30,
+        "img":{
+            "img1":"/src/assets/image/home/motoOne.png",
+            "img2":"/src/assets/image/home/motoTwo.png"
+        },
+        "name":"Honda CB 125",
+        "type":"Sport bike",
+        "year":2023,
+        "liter":0.3,
+        "kilometer":5.000,
+        "price":7500
+    },
+    {
+        "id":31,
+        "img":{
+            "img1":"/src/assets/image/home/motoOne.png",
+            "img2":"/src/assets/image/home/motoTwo.png"
+        },
+        "name":"Honda CB 125",
+        "type":"Sport bike",
+        "year":2023,
+        "liter":0.3,
+        "kilometer":5.000,
+        "price":7500
+    },
+    {
+        "id":32,
+        "img":{
+            "img1":"/src/assets/image/home/motoOne.png",
+            "img2":"/src/assets/image/home/motoTwo.png"
+        },
+        "name":"Honda CB 125",
+        "type":"Sport bike",
+        "year":2023,
+        "liter":0.3,
+        "kilometer":5.000,
+        "price":7500
+    },
+    {
+        "id":33,
+        "img":{
+            "img1":"/src/assets/image/home/motoOne.png",
+            "img2":"/src/assets/image/home/motoTwo.png"
+        },
+        "name":"Honda CB 125",
+        "type":"Sport bike",
+        "year":2023,
+        "liter":0.3,
+        "kilometer":5.000,
+        "price":7500
+    },
+    {
+        "id":34,
+        "img":{
+            "img1":"/src/assets/image/home/motoOne.png",
+            "img2":"/src/assets/image/home/motoTwo.png"
+        },
+        "name":"Honda CB 125",
+        "type":"Sport bike",
+        "year":2023,
+        "liter":0.3,
+        "kilometer":5.000,
+        "price":7500
+    }
+]
