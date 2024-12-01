@@ -75,15 +75,20 @@ header .phone-lang .dropdown .dropdown-menu {
   position: absolute;
   z-index: 1000;
   margin-top: 3px;
-  border-radius: 4px;
   border: 1px solid white;
-  background-color: black;
+  border-radius: 6px;
+  border: 1px solid var(--Primitives-Stroke-Neutral-Accent, #DADDDA);
+  background: #FFF;
+  box-shadow: 0px 4px 16px 0px rgba(197, 203, 218, 0.15);
 }
 header .phone-lang .dropdown .dropdown-menu li {
   margin-bottom: 0px;
-  color: white;
-  font-size: 15px;
+  color: var(--Color-Black, #060606);
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
   font-weight: 400;
+  line-height: 18px;
   cursor: pointer;
 }
 header .phone-lang .open .dropdown-menu {
@@ -226,7 +231,7 @@ nav .view .res-menu .search-bar {
   align-items: center;
   gap: 10px;
 }
-nav .view .res-menu .search-bar .search {
+nav .view .res-menu .search-bar .searchIcon {
   width: 40px;
   height: 40px;
   display: flex;
@@ -235,7 +240,7 @@ nav .view .res-menu .search-bar .search {
   border: 1px solid rgb(218, 221, 218);
   border-radius: 6px;
 }
-nav .view .res-menu .search-bar .search img {
+nav .view .res-menu .search-bar .searchIcon img {
   width: 20px;
   height: 20px;
 }
@@ -822,6 +827,7 @@ nav #searchDiv .search #input {
   flex-shrink: 0;
 }
 .container .two #twoCards .card .imgDiv .crown {
+  cursor: pointer;
   position: absolute;
   display: flex;
   width: 30px;
@@ -1086,6 +1092,7 @@ nav #searchDiv .search #input {
   flex-shrink: 0;
 }
 .container .three #threeCards .card .imgDiv .crown {
+  cursor: pointer;
   position: absolute;
   display: flex;
   width: 30px;
@@ -1285,6 +1292,7 @@ nav #searchDiv .search #input {
   flex-shrink: 0;
 }
 .container .four #fourCards .card .imgDiv .crown {
+  cursor: pointer;
   position: absolute;
   display: flex;
   width: 30px;
@@ -1515,6 +1523,7 @@ nav #searchDiv .search #input {
   flex-shrink: 0;
 }
 .container .five #fiveCards .card .imgDiv .crown {
+  cursor: pointer;
   position: absolute;
   display: flex;
   width: 30px;
@@ -1595,6 +1604,154 @@ nav #searchDiv .search #input {
 .container .five .mobile {
   display: none;
 }
+.container .foot {
+  margin: 140px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.container .foot #footCards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-content: space-between;
+  gap: 20px;
+}
+.container .foot #footCards .card {
+  width: 100%;
+}
+.container .foot #footCards .card ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.container .foot #footCards .card ul li {
+  color: var(--Primitives-Text-Secondary, #616861);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.32px;
+}
+.container .foot a {
+  color: var(--Color-Primary-900, #1A4D1C);
+  text-align: center;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: none;
+}
+
+footer {
+  max-width: 100%;
+  width: 100%;
+  min-height: 300px;
+  background: var(--Color-Black, #060606);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .footer-head {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 60px 130px 80px 130px;
+}
+footer .footer-head .main {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 24px;
+}
+footer .footer-head .main .logo {
+  max-width: 265px;
+  width: 100%;
+}
+footer .footer-head .main .icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+footer .footer-head .main .icons .icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+footer .footer-head .f-menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+footer .footer-head .f-menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .footer-head .f-menu ul a {
+  color: #FFF;
+  font-family: "Proxima Nova";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.32px;
+}
+footer .footer-head .f-menuRes {
+  width: 100%;
+  display: none;
+}
+footer .footer-head .f-menuRes ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+footer .footer-head .f-menuRes ul li a {
+  color: #FFF;
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.32px;
+}
+footer .footer-foot {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #616861;
+}
+footer .footer-foot div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 130px 20px 130px;
+}
+footer .footer-foot div p {
+  color: var(--Color-Neutral-200, #DADDDA);
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.06px;
+}
 
 @media (min-width: 324px) and (max-width: 768px) {
   header {
@@ -1618,8 +1775,31 @@ nav #searchDiv .search #input {
   nav #searchDiv .search #input {
     width: 88%;
   }
+  footer .footer-head {
+    padding: 35px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+  footer .footer-head .f-menu {
+    display: none;
+  }
+  footer .footer-head .f-menuRes {
+    display: block;
+  }
+  footer .footer-foot div {
+    padding: 10px 16px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    gap: 15px;
+  }
   .container {
     padding: 10px 16px;
+  }
+  .container .filter-main {
+    display: none;
   }
   .container .two {
     display: flex;
@@ -1839,6 +2019,13 @@ nav #searchDiv .search #input {
   .container .five .mobile img {
     width: 24px;
     height: 24px;
+  }
+  .container .foot #footCards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .container .foot a {
+    display: block;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {

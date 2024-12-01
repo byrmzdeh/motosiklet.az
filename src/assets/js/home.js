@@ -197,4 +197,55 @@ document.addEventListener('DOMContentLoaded', function () {
             console.error('Xəta baş verdi:', err);
             fiveCards.innerHTML = '<p>Fayl yüklənmədi. Zəhmət olmasa, sonra yenidən cəhd edin.</p>';
         });
+
+
+    ///Foot
+    const footCards = document.getElementById('footCards');
+    const footUrl = '/src/data/data.json';
+    
+    fetch(footUrl)
+        .then(res => res.json())
+        .then(data => {
+            function renderCards() {
+                let displayedData = data;
+    
+                // Ekran ölçüsünü yoxlayırıq
+                if (window.innerWidth >= 324 && window.innerWidth <= 768) {
+                    displayedData = data.slice(0, 2); // Yalnız ilk 2 kart göstərilir
+                }
+    
+                // Kartların HTML-ini yaradırıq
+                const cardsFoot = displayedData.map(item => `
+                    <div class='card'>
+                        <ul>
+                            <li>${item.title1}</li>
+                            <li>${item.title2}</li>
+                            <li>${item.title3}</li>
+                            <li>${item.title4}</li>
+                            <li>${item.title5}</li>
+                            <li>${item.title6}</li>
+                            <li>${item.title7}</li>
+                            <li>${item.title8}</li>
+                            <li>${item.title9}</li>
+                            <li>${item.title10}</li>
+                            <li>${item.title11}</li>
+                            <li>${item.title12}</li>
+                        </ul>
+                    </div>
+                `).join('');
+    
+                footCards.innerHTML = cardsFoot; 
+            }
+    
+            // İlk dəfə kartları render edirik
+            renderCards();
+    
+            // Ekran ölçüsü dəyişəndə yenidən render edirik
+            window.addEventListener('resize', renderCards);
+        })
+        .catch(err => {
+            console.error('Xəta baş verdi:', err);
+            footCards.innerHTML = '<p>Fayl yüklənmədi. Zəhmət olmasa, sonra yenidən cəhd edin.</p>';
+        });
+    
 });
