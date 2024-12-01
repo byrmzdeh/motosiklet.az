@@ -837,7 +837,7 @@ nav {
 
             .special {
                 width: 100%;
-                min-height: 365px;
+                min-height: 253px;
                 height: 100%;
                 padding: 10px 20px;
                 display: flex;
@@ -902,7 +902,7 @@ nav {
                 border-radius: 12px;
                 background: var(--Color-White, #FFF);
                 box-shadow: 0px 10px 40px 0px rgba(125, 143, 173, 0.15);
-                min-height: 365px;
+                min-height: 253px;
                 height: 100%;
                 border-radius: 16px;
                 display: flex;
@@ -912,12 +912,12 @@ nav {
                 .imgDiv {
                     width: 100%;
                     position: relative;
-                    min-height: 201px;
+                    min-height: 133px;
 
 
                     .imgMoto {
                         width: 100%;
-                        min-height: 201px;
+                        min-height: 133px;
                         border-radius: 16px 16px 0px 0px;
                         object-fit: cover;
                     }
@@ -1142,7 +1142,7 @@ nav {
 
             .special {
                 width: 100%;
-                min-height: 365px;
+                min-height: 253px;
                 height: 100%;
                 padding: 10px 20px;
                 display: flex;
@@ -1207,7 +1207,7 @@ nav {
                 border-radius: 12px;
                 background: var(--Color-White, #FFF);
                 box-shadow: 0px 10px 40px 0px rgba(125, 143, 173, 0.15);
-                min-height: 365px;
+                min-height: 253px;
                 height: 100%;
                 border-radius: 16px;
                 display: flex;
@@ -1217,12 +1217,12 @@ nav {
                 .imgDiv {
                     width: 100%;
                     position: relative;
-                    min-height: 201px;
+                    min-height: 133px;
 
 
                     .imgMoto {
                         width: 100%;
-                        min-height: 201px;
+                        min-height: 133px;
                         border-radius: 16px 16px 0px 0px;
                         object-fit: cover;
                     }
@@ -1439,13 +1439,13 @@ nav {
             grid-template-columns: repeat(4, 1fr);
             gap: 20px;
 
-   
+
 
             .card {
                 border-radius: 12px;
                 background: var(--Color-White, #FFF);
                 box-shadow: 0px 10px 40px 0px rgba(125, 143, 173, 0.15);
-                min-height: 365px;
+                min-height: 253px;
                 height: 100%;
                 border-radius: 16px;
                 display: flex;
@@ -1455,12 +1455,12 @@ nav {
                 .imgDiv {
                     width: 100%;
                     position: relative;
-                    min-height: 201px;
+                    min-height: 133px;
 
 
                     .imgMoto {
                         width: 100%;
-                        min-height: 201px;
+                        min-height: 133px;
                         border-radius: 16px 16px 0px 0px;
                         object-fit: cover;
                     }
@@ -1614,6 +1614,10 @@ nav {
             }
         }
 
+        .mobile {
+            display: none;
+        }
+
         button {
             min-width: 340px;
             min-height: 44px;
@@ -1630,7 +1634,7 @@ nav {
             cursor: pointer;
 
             a {
-                color:  #1A4D1C;
+                color: #1A4D1C;
                 text-align: center;
                 font-family: Inter;
                 font-size: 16px;
@@ -1639,9 +1643,11 @@ nav {
                 line-height: 150%;
                 letter-spacing: 0.08px;
             }
-            &:hover{
-                background-color:  var(--Color-Primary-500, #2FAB32) ;
-                a{
+
+            &:hover {
+                background-color: var(--Color-Primary-500, #2FAB32);
+
+                a {
                     color: white;
                 }
             }
@@ -1707,13 +1713,13 @@ nav {
             grid-template-columns: repeat(4, 1fr);
             gap: 20px;
 
-   
+
 
             .card {
                 border-radius: 12px;
                 background: var(--Color-White, #FFF);
                 box-shadow: 0px 10px 40px 0px rgba(125, 143, 173, 0.15);
-                min-height: 365px;
+                min-height: 253px;
                 height: 100%;
                 border-radius: 16px;
                 display: flex;
@@ -1723,12 +1729,12 @@ nav {
                 .imgDiv {
                     width: 100%;
                     position: relative;
-                    min-height: 201px;
+                    min-height: 133px;
 
 
                     .imgMoto {
                         width: 100%;
-                        min-height: 201px;
+                        min-height: 133px;
                         border-radius: 16px 16px 0px 0px;
                         object-fit: cover;
                     }
@@ -1882,7 +1888,11 @@ nav {
             }
         }
 
- 
+        .mobile {
+            display: none;
+        }
+
+
 
 
     }
@@ -1965,6 +1975,7 @@ nav {
                 gap: 12px;
 
                 .special {
+
                     gap: 10px;
 
                     img {
@@ -1981,6 +1992,8 @@ nav {
                 }
 
                 .card {
+
+
                     .information {
                         .name {
                             font-size: 16px;
@@ -2154,11 +2167,33 @@ nav {
                     }
                 }
             }
-            button{
+
+            .mobile {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+
+                p {
+                    color: var(--Color-Primary-900, #1A4D1C);
+                    text-align: center;
+                    font-family: Inter;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+
+            button {
                 width: 100%;
             }
 
-          
+
         }
 
         .five {
@@ -2204,7 +2239,28 @@ nav {
                     }
                 }
             }
-        
+
+            .mobile {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+
+                p {
+                    color: var(--Color-Primary-900, #1A4D1C);
+                    text-align: center;
+                    font-family: Inter;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+
         }
     }
 }

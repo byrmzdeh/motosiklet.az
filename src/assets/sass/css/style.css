@@ -697,7 +697,7 @@ nav #searchDiv .search #input {
 }
 .container .two #twoCards .special {
   width: 100%;
-  min-height: 365px;
+  min-height: 253px;
   height: 100%;
   padding: 10px 20px;
   display: flex;
@@ -756,7 +756,7 @@ nav #searchDiv .search #input {
   border-radius: 12px;
   background: var(--Color-White, #FFF);
   box-shadow: 0px 10px 40px 0px rgba(125, 143, 173, 0.15);
-  min-height: 365px;
+  min-height: 253px;
   height: 100%;
   border-radius: 16px;
   display: flex;
@@ -766,11 +766,11 @@ nav #searchDiv .search #input {
 .container .two #twoCards .card .imgDiv {
   width: 100%;
   position: relative;
-  min-height: 201px;
+  min-height: 133px;
 }
 .container .two #twoCards .card .imgDiv .imgMoto {
   width: 100%;
-  min-height: 201px;
+  min-height: 133px;
   border-radius: 16px 16px 0px 0px;
   object-fit: cover;
 }
@@ -961,7 +961,7 @@ nav #searchDiv .search #input {
 }
 .container .three #threeCards .special {
   width: 100%;
-  min-height: 365px;
+  min-height: 253px;
   height: 100%;
   padding: 10px 20px;
   display: flex;
@@ -1020,7 +1020,7 @@ nav #searchDiv .search #input {
   border-radius: 12px;
   background: var(--Color-White, #FFF);
   box-shadow: 0px 10px 40px 0px rgba(125, 143, 173, 0.15);
-  min-height: 365px;
+  min-height: 253px;
   height: 100%;
   border-radius: 16px;
   display: flex;
@@ -1030,11 +1030,11 @@ nav #searchDiv .search #input {
 .container .three #threeCards .card .imgDiv {
   width: 100%;
   position: relative;
-  min-height: 201px;
+  min-height: 133px;
 }
 .container .three #threeCards .card .imgDiv .imgMoto {
   width: 100%;
-  min-height: 201px;
+  min-height: 133px;
   border-radius: 16px 16px 0px 0px;
   object-fit: cover;
 }
@@ -1219,7 +1219,7 @@ nav #searchDiv .search #input {
   border-radius: 12px;
   background: var(--Color-White, #FFF);
   box-shadow: 0px 10px 40px 0px rgba(125, 143, 173, 0.15);
-  min-height: 365px;
+  min-height: 253px;
   height: 100%;
   border-radius: 16px;
   display: flex;
@@ -1229,11 +1229,11 @@ nav #searchDiv .search #input {
 .container .four #fourCards .card .imgDiv {
   width: 100%;
   position: relative;
-  min-height: 201px;
+  min-height: 133px;
 }
 .container .four #fourCards .card .imgDiv .imgMoto {
   width: 100%;
-  min-height: 201px;
+  min-height: 133px;
   border-radius: 16px 16px 0px 0px;
   object-fit: cover;
 }
@@ -1362,6 +1362,9 @@ nav #searchDiv .search #input {
   font-weight: 500;
   line-height: 30px;
 }
+.container .four .mobile {
+  display: none;
+}
 .container .four button {
   min-width: 340px;
   min-height: 44px;
@@ -1446,7 +1449,7 @@ nav #searchDiv .search #input {
   border-radius: 12px;
   background: var(--Color-White, #FFF);
   box-shadow: 0px 10px 40px 0px rgba(125, 143, 173, 0.15);
-  min-height: 365px;
+  min-height: 253px;
   height: 100%;
   border-radius: 16px;
   display: flex;
@@ -1456,11 +1459,11 @@ nav #searchDiv .search #input {
 .container .five #fiveCards .card .imgDiv {
   width: 100%;
   position: relative;
-  min-height: 201px;
+  min-height: 133px;
 }
 .container .five #fiveCards .card .imgDiv .imgMoto {
   width: 100%;
-  min-height: 201px;
+  min-height: 133px;
   border-radius: 16px 16px 0px 0px;
   object-fit: cover;
 }
@@ -1588,6 +1591,9 @@ nav #searchDiv .search #input {
   font-style: normal;
   font-weight: 500;
   line-height: 30px;
+}
+.container .five .mobile {
+  display: none;
 }
 
 @media (min-width: 324px) and (max-width: 768px) {
@@ -1769,6 +1775,24 @@ nav #searchDiv .search #input {
     line-height: 25px;
     font-size: 18px;
   }
+  .container .four .mobile {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .container .four .mobile p {
+    color: var(--Color-Primary-900, #1A4D1C);
+    text-align: center;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .container .four .mobile img {
+    width: 24px;
+    height: 24px;
+  }
   .container .four button {
     width: 100%;
   }
@@ -1797,6 +1821,24 @@ nav #searchDiv .search #input {
   .container .five #fiveCards .card .information h5 {
     line-height: 25px;
     font-size: 18px;
+  }
+  .container .five .mobile {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .container .five .mobile p {
+    color: var(--Color-Primary-900, #1A4D1C);
+    text-align: center;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .container .five .mobile img {
+    width: 24px;
+    height: 24px;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
