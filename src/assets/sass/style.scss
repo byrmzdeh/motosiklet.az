@@ -219,11 +219,13 @@ nav {
                     justify-content: center;
                     border: 1px solid rgba(218, 221, 218, 1);
                     border-radius: 6px;
+                    cursor: pointer;
 
                     img {
                         width: 20px;
                         height: 20px;
                     }
+
                 }
 
                 .new {
@@ -473,6 +475,9 @@ nav {
                 border: none;
                 background-color: transparent;
                 outline: none;
+            }
+            #closeSearch{
+                cursor: pointer;
             }
         }
     }
@@ -1912,7 +1917,7 @@ nav {
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        gap: 30px;
+        gap: 50px;
 
         #footCards {
             width: 100%;
@@ -2004,6 +2009,11 @@ footer {
                     align-items: center;
                     justify-content: center;
                     cursor: pointer;
+                    a{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
                 }
             }
         }
@@ -2119,7 +2129,7 @@ footer {
 
             .search {
                 #input {
-                    width: 88%;
+                    width: 84%;
                 }
             }
 
@@ -2132,7 +2142,7 @@ footer {
             padding: 35px 16px;
             display: flex;
             flex-direction: column;
-            gap: 60px;
+            gap: 70px;
 
             .f-menu {
                 display: none;
@@ -2159,9 +2169,9 @@ footer {
     .container {
         padding: 10px 16px;
 
-        .filter-main{
-            display: none;
-        }
+        // .filter-main{
+        //     display: none;
+        // }
 
         .two {
             display: flex;
@@ -2200,6 +2210,8 @@ footer {
 
                     img {
                         padding: 0px 0px 0px 0px;
+                        width: 68px;
+                        height: 68px;
                     }
 
                     p {
@@ -2238,6 +2250,7 @@ footer {
                 align-items: center;
                 gap: 4px;
 
+
                 p {
                     color: var(--Color-Primary-900, #1A4D1C);
                     text-align: center;
@@ -2249,8 +2262,8 @@ footer {
                 }
 
                 img {
-                    width: 24px;
-                    height: 24px;
+                    width: 20px;
+                    height: 20px;
                 }
             }
         }
@@ -2291,6 +2304,8 @@ footer {
 
                     img {
                         padding: 0px 0px 0px 0px;
+                        width: 61px;
+                        height: 57px;
                     }
 
                     p {
@@ -2327,6 +2342,7 @@ footer {
                 align-items: center;
                 gap: 4px;
 
+
                 p {
                     color: var(--Color-Primary-900, #1A4D1C);
                     text-align: center;
@@ -2338,8 +2354,8 @@ footer {
                 }
 
                 img {
-                    width: 24px;
-                    height: 24px;
+                    width: 20px;
+                    height: 20px;
                 }
             }
         }
@@ -2393,6 +2409,7 @@ footer {
                 align-items: center;
                 gap: 4px;
 
+
                 p {
                     color: var(--Color-Primary-900, #1A4D1C);
                     text-align: center;
@@ -2404,8 +2421,8 @@ footer {
                 }
 
                 img {
-                    width: 24px;
-                    height: 24px;
+                    width: 20px;
+                    height: 20px;
                 }
             }
 
@@ -2465,6 +2482,7 @@ footer {
                 align-items: center;
                 gap: 4px;
 
+
                 p {
                     color: var(--Color-Primary-900, #1A4D1C);
                     text-align: center;
@@ -2476,17 +2494,24 @@ footer {
                 }
 
                 img {
-                    width: 24px;
-                    height: 24px;
+                    width: 20px;
+                    height: 20px;
                 }
             }
 
         }
 
         .foot {
+            margin: 70px auto;
+
             #footCards {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
+                .card{
+                    ul{
+                        gap: 11px;
+                    }
+                }
             }
 
             a {
