@@ -360,58 +360,6 @@ nav .view .new .elan {
   line-height: 24px;
   color: white;
 }
-nav .view #moto {
-  width: 100%;
-  height: 44px;
-  border-radius: 6px;
-  border: 1px solid var(--Color-Neutral-200, #DADDDA);
-  background: var(--Primitives-Surface-Low, #FFF);
-  padding: 12px 16px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  cursor: pointer;
-}
-nav .view #moto img {
-  width: 24px;
-  height: 24px;
-}
-nav .view #moto p {
-  color: var(--Primitives-Text-Neutral, #272A27);
-  text-align: center;
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
-  letter-spacing: 0.08px;
-}
-nav .view #etrafli {
-  width: 100%;
-  height: 44px;
-  border-radius: 6px;
-  border: 1px solid var(--Color-Neutral-200, #DADDDA);
-  background: var(--Primitives-Surface-Low, #FFF);
-  padding: 12px 16px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  cursor: pointer;
-}
-nav .view #etrafli img {
-  width: 24px;
-  height: 24px;
-}
-nav .view #etrafli p {
-  color: var(--Primitives-Text-Neutral, #272A27);
-  text-align: center;
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
-  letter-spacing: 0.08px;
-}
 nav #searchDiv {
   height: 65px;
   display: flex;
@@ -449,132 +397,70 @@ nav #searchDiv .search #closeSearch {
   cursor: pointer;
 }
 
-.filter-mainRes {
+.filter-main {
   max-width: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  border-color: red;
-  z-index: 4;
-  display: none;
-}
-.filter-mainRes #motoMenu {
-  max-width: 100%;
-  width: 100%;
-  background-color: white;
-  padding: 24px 16px;
-}
-.filter-mainRes #motoMenu .selects-vieww {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(170, 162, 162);
-  gap: 11px;
-}
-.filter-mainRes #motoMenu .selects-vieww .view {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.filter-mainRes #motoMenu .selects-vieww .view select {
-  width: 100%;
-  height: 44px;
-  padding: 10px;
-  outline: none;
-  border: none;
-}
-.filter-mainRes #motoMenu .selects-vieww .view .half-select {
-  display: flex;
-  gap: 10px;
-}
-.filter-mainRes #motoMenu .selects-vieww .view .three-select {
-  display: flex;
-  gap: 10px;
-}
-.filter-mainRes #motoMenu .selects-openn {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
-  height: 0px;
-  opacity: 0;
-  overflow: hidden;
-  transition: height 0.3s ease, opacity 0.3s ease;
-}
-.filter-mainRes #motoMenu .selects-openn .view {
-  width: 100%;
-  border-radius: 6px;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  gap: 8px;
-}
-.filter-mainRes #motoMenu .selects-openn .view select {
-  width: 100%;
-  display: flex;
-  padding: 10px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-  outline: none;
-  border: none;
-  border-radius: 6px;
-  border: 1px solid var(--Primitives-Stroke-Neutral-Accent, #DADDDA);
-  background: var(--Primitives-Surface-Low, #FFF);
-}
-.filter-mainRes #motoMenu .selects-openn .view .half-select {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-}
-.filter-mainRes #motoMenu .selects-openn .view .half-select label {
-  width: 100%;
-  border-radius: 6px;
-  border: 1px solid gray;
-  background: var(--Primitives-Surface-Low, #FFF);
-  display: flex;
-  padding: 10px;
-  gap: 10px;
-}
-.filter-mainRes #motoMenu .selects-openn .view .half-select label input[type=checkbox] {
-  width: 18px;
-  height: 18px;
-  appearance: none;
-  border-radius: 4px;
-  border: 1px solid var(--Color-Neutral-200, #DADDDA);
-  background: var(--Primary-Base-White, #FFF);
-  cursor: pointer;
-  position: relative;
-}
-.filter-mainRes #motoMenu .selects-openn .view .half-select label input[type=checkbox]:checked {
-  border-radius: 4px;
-  background: var(--Color-Primary-500, #2FAB32);
-}
-.filter-mainRes #motoMenu .selects-openn .view .half-select label input[type=checkbox]:checked::after {
-  content: url("/src/assets/image/filter/checked.png");
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 16px;
-  height: 16px;
-}
-.filter-mainRes #motoMenu .selects-openn .view .half-select .active {
-  border: 1px solid var(--Color-Primary-500, #2FAB32);
-}
-.filter-mainRes #motoMenu .selects-openn .view .three-select {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-}
-
-.container {
   padding: 20px 130px;
 }
-.container .filter-main {
+.filter-main .main-buttons {
+  display: none;
+}
+.filter-main .main-buttons #moto {
+  width: 100%;
+  height: 44px;
+  border-radius: 6px;
+  border: 1px solid var(--Color-Neutral-200, #DADDDA);
+  background: var(--Primitives-Surface-Low, #FFF);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+}
+.filter-main .main-buttons #moto img {
+  width: 24px;
+  height: 24px;
+}
+.filter-main .main-buttons #moto p {
+  color: var(--Primitives-Text-Neutral, #272A27);
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.08px;
+}
+.filter-main .main-buttons #etrafli {
+  width: 100%;
+  height: 44px;
+  border-radius: 6px;
+  border: 1px solid var(--Color-Neutral-200, #DADDDA);
+  background: var(--Primitives-Surface-Low, #FFF);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+}
+.filter-main .main-buttons #etrafli img {
+  width: 24px;
+  height: 24px;
+}
+.filter-main .main-buttons #etrafli p {
+  color: var(--Primitives-Text-Neutral, #272A27);
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.08px;
+}
+.filter-main .main-show {
   max-width: 100%;
   width: 100%;
   height: auto;
@@ -588,14 +474,36 @@ nav #searchDiv .search #closeSearch {
   gap: 25px;
   align-items: center;
   position: static;
+  width: 100%;
 }
-.container .filter-main .filter-buttons {
+.filter-main .main-show .back {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+.filter-main .main-show .back #back {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+.filter-main .main-show .back p {
+  color: var(--Primitives-Stroke-Primary, #092A0C);
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.06px;
+}
+.filter-main .main-show .filter-buttons {
   max-width: 100%;
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.container .filter-main .filter-buttons .buttons-one {
+.filter-main .main-show .filter-buttons .buttons-one {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -603,7 +511,7 @@ nav #searchDiv .search #closeSearch {
   background-color: var(--Primitives-Surface-Mid, #F7F8F7);
   padding: 2px;
 }
-.container .filter-main .filter-buttons .buttons-one button {
+.filter-main .main-show .filter-buttons .buttons-one button {
   width: 118px;
   height: 15px;
   display: flex;
@@ -613,7 +521,7 @@ nav #searchDiv .search #closeSearch {
   background-color: transparent;
   cursor: pointer;
 }
-.container .filter-main .filter-buttons .buttons-one button span {
+.filter-main .main-show .filter-buttons .buttons-one button span {
   color: var(--Primitives-Text-Neutral, #272A27);
   text-align: center;
   font-family: Inter;
@@ -622,24 +530,24 @@ nav #searchDiv .search #closeSearch {
   font-weight: 400;
   letter-spacing: 0.08px;
 }
-.container .filter-main .filter-buttons .buttons-one .active {
+.filter-main .main-show .filter-buttons .buttons-one .active {
   border-radius: 5px;
   background: var(--System-Backgrounds-SB-L-Primary, #FFF);
   box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.12), 0px 3px 1px 0px rgba(0, 0, 0, 0.04);
   border-left: none;
   height: 30px;
 }
-.container .filter-main .filter-buttons .buttons-one .active span {
+.filter-main .main-show .filter-buttons .buttons-one .active span {
   color: #249527;
 }
-.container .filter-main .filter-buttons .buttons-two {
+.filter-main .main-show .filter-buttons .buttons-two {
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 6px;
   gap: 10px;
 }
-.container .filter-main .filter-buttons .buttons-two button {
+.filter-main .main-show .filter-buttons .buttons-two button {
   width: auto;
   height: 30px;
   display: flex;
@@ -653,7 +561,7 @@ nav #searchDiv .search #closeSearch {
   gap: 5px;
   cursor: pointer;
 }
-.container .filter-main .filter-buttons .buttons-two button span {
+.filter-main .main-show .filter-buttons .buttons-two button span {
   color: var(--Primitives-Text-Neutral, #272A27);
   text-align: center;
   font-family: Inter;
@@ -662,25 +570,25 @@ nav #searchDiv .search #closeSearch {
   font-weight: 400;
   letter-spacing: 0.08px;
 }
-.container .filter-main .filter-buttons .buttons-two .active {
+.filter-main .main-show .filter-buttons .buttons-two .active {
   border-radius: 100px;
   border: 1px solid var(--Color-Primary-500, #2FAB32);
   background: var(--Color-Primary-50, #F2FCF1);
 }
-.container .filter-main .selects-view {
+.filter-main .main-show .selects-view {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 }
-.container .filter-main .selects-view .view {
+.filter-main .main-show .selects-view .view {
   width: 100%;
   border-radius: 6px;
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.container .filter-main .selects-view .view select {
+.filter-main .main-show .selects-view .view select {
   width: 100%;
   display: flex;
   padding: 10px;
@@ -693,17 +601,17 @@ nav #searchDiv .search #closeSearch {
   border: 1px solid var(--Primitives-Stroke-Neutral-Accent, #DADDDA);
   background: var(--Primitives-Surface-Low, #FFF);
 }
-.container .filter-main .selects-view .view .half-select {
+.filter-main .main-show .selects-view .view .half-select {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
-.container .filter-main .selects-view .view .three-select {
+.filter-main .main-show .selects-view .view .three-select {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
-.container .filter-main .selects-open {
+.filter-main .main-show .selects-open {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -713,7 +621,7 @@ nav #searchDiv .search #closeSearch {
   overflow: hidden;
   transition: height 0.3s ease, opacity 0.3s ease;
 }
-.container .filter-main .selects-open .view {
+.filter-main .main-show .selects-open .view {
   width: 100%;
   border-radius: 6px;
   display: flex;
@@ -721,7 +629,7 @@ nav #searchDiv .search #closeSearch {
   justify-content: end;
   gap: 8px;
 }
-.container .filter-main .selects-open .view select {
+.filter-main .main-show .selects-open .view select {
   width: 100%;
   display: flex;
   padding: 10px;
@@ -734,12 +642,12 @@ nav #searchDiv .search #closeSearch {
   border: 1px solid var(--Primitives-Stroke-Neutral-Accent, #DADDDA);
   background: var(--Primitives-Surface-Low, #FFF);
 }
-.container .filter-main .selects-open .view .half-select {
+.filter-main .main-show .selects-open .view .half-select {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
-.container .filter-main .selects-open .view .half-select label {
+.filter-main .main-show .selects-open .view .half-select label {
   width: 100%;
   border-radius: 6px;
   border: 1px solid gray;
@@ -748,7 +656,7 @@ nav #searchDiv .search #closeSearch {
   padding: 10px;
   gap: 10px;
 }
-.container .filter-main .selects-open .view .half-select label input[type=checkbox] {
+.filter-main .main-show .selects-open .view .half-select label input[type=checkbox] {
   width: 18px;
   height: 18px;
   appearance: none;
@@ -758,11 +666,11 @@ nav #searchDiv .search #closeSearch {
   cursor: pointer;
   position: relative;
 }
-.container .filter-main .selects-open .view .half-select label input[type=checkbox]:checked {
+.filter-main .main-show .selects-open .view .half-select label input[type=checkbox]:checked {
   border-radius: 4px;
   background: var(--Color-Primary-500, #2FAB32);
 }
-.container .filter-main .selects-open .view .half-select label input[type=checkbox]:checked::after {
+.filter-main .main-show .selects-open .view .half-select label input[type=checkbox]:checked::after {
   content: url("/src/assets/image/filter/checked.png");
   display: block;
   position: absolute;
@@ -772,26 +680,26 @@ nav #searchDiv .search #closeSearch {
   width: 16px;
   height: 16px;
 }
-.container .filter-main .selects-open .view .half-select .active {
+.filter-main .main-show .selects-open .view .half-select .active {
   border: 1px solid var(--Color-Primary-500, #2FAB32);
 }
-.container .filter-main .selects-open .view .three-select {
+.filter-main .main-show .selects-open .view .three-select {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
-.container .filter-main .readMore {
+.filter-main .main-show .readMore {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.container .filter-main .readMore .today {
+.filter-main .main-show .readMore .today {
   width: 50%;
   display: flex;
   gap: 10px;
 }
-.container .filter-main .readMore .today p {
+.filter-main .main-show .readMore .today p {
   font-family: Inter;
   font-size: 14px;
   font-style: normal;
@@ -799,7 +707,7 @@ nav #searchDiv .search #closeSearch {
   line-height: 150%;
   letter-spacing: 0.07px;
 }
-.container .filter-main .readMore .today .day {
+.filter-main .main-show .readMore .today .day {
   color: var(--Color-Primary-600, #249527);
   font-family: Inter;
   font-size: 14px;
@@ -808,14 +716,14 @@ nav #searchDiv .search #closeSearch {
   line-height: 150%;
   letter-spacing: 0.07px;
 }
-.container .filter-main .readMore .more-filter {
+.filter-main .main-show .readMore .more-filter {
   width: 50%;
   display: flex;
   gap: 16px;
   align-items: center;
   justify-content: end;
 }
-.container .filter-main .readMore .more-filter .zero {
+.filter-main .main-show .readMore .more-filter .zero {
   color: var(--Color-Primary-600, #249527);
   font-family: Inter;
   font-size: 14px;
@@ -824,7 +732,7 @@ nav #searchDiv .search #closeSearch {
   line-height: 16px;
   letter-spacing: 0.08px;
 }
-.container .filter-main .readMore .more-filter #more {
+.filter-main .main-show .readMore .more-filter #more {
   min-width: 101px;
   height: 44px;
   padding: 10px;
@@ -833,7 +741,7 @@ nav #searchDiv .search #closeSearch {
   background: var(--Color-White, #FFF);
   cursor: pointer;
 }
-.container .filter-main .readMore .more-filter #more span {
+.filter-main .main-show .readMore .more-filter #more span {
   color: var(--Color-White, #FFF);
   font-family: Inter;
   font-size: 16px;
@@ -841,7 +749,7 @@ nav #searchDiv .search #closeSearch {
   font-weight: 400;
   line-height: 24px;
 }
-.container .filter-main .readMore .more-filter #search {
+.filter-main .main-show .readMore .more-filter #search {
   min-width: 133px;
   height: 44px;
   padding: 10px;
@@ -854,7 +762,7 @@ nav #searchDiv .search #closeSearch {
   border: none;
   cursor: pointer;
 }
-.container .filter-main .readMore .more-filter #search span {
+.filter-main .main-show .readMore .more-filter #search span {
   color: var(--Color-White, #FFF);
   text-align: center;
   font-family: Inter;
@@ -863,6 +771,10 @@ nav #searchDiv .search #closeSearch {
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.08px;
+}
+
+.container {
+  padding: 20px 130px;
 }
 .container .one {
   max-width: 100%;
@@ -2012,10 +1924,6 @@ footer .footer-foot div p {
   nav #searchDiv .search #input {
     width: 84%;
   }
-  .filter-mainRes {
-    display: block;
-    top: 0px;
-  }
   footer .footer-head {
     padding: 35px 16px;
     display: flex;
@@ -2036,11 +1944,37 @@ footer .footer-foot div p {
     flex-direction: column;
     gap: 15px;
   }
-  .container {
+  .filter-main {
+    width: 100%;
+    padding: 0px 0px;
+  }
+  .filter-main .main-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
     padding: 10px 16px;
   }
-  .container .filter-main {
+  .filter-main .main-show {
+    position: absolute;
+    border-radius: 0px;
+    padding: 10px 16px;
+    top: 0px;
+    z-index: 6;
+    background-color: yellow;
     display: none;
+  }
+  .filter-main .main-show .filter-buttons .buttons-two {
+    display: none;
+  }
+  .filter-main .main-show .selects-view {
+    background-color: rebeccapurple;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    top: 0px;
+    z-index: 6;
+  }
+  .container {
+    padding: 10px 16px;
   }
   .container .two {
     display: flex;
@@ -2296,11 +2230,37 @@ footer .footer-foot div p {
   nav #searchDiv .search #input {
     width: 84%;
   }
-  .container {
+  .filter-main {
+    width: 100%;
+    padding: 0px 0px;
+  }
+  .filter-main .main-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
     padding: 10px 40px;
   }
-  .container .filter-main {
+  .filter-main .main-show {
+    position: absolute;
+    border-radius: 0px;
+    padding: 10px 40px;
+    top: 0px;
+    z-index: 6;
+    background-color: yellow;
     display: none;
+  }
+  .filter-main .main-show .filter-buttons .buttons-two {
+    display: none;
+  }
+  .filter-main .main-show .selects-view {
+    background-color: rebeccapurple;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    top: 0px;
+    z-index: 6;
+  }
+  .container {
+    padding: 10px 40px;
   }
   .container .two #twoCards {
     display: grid;
@@ -2347,11 +2307,11 @@ footer .footer-foot div p {
   nav .show .menu .search-new {
     gap: 10px;
   }
-  .container .filter-main .filter-buttons {
+  .filter-main .main-show .filter-buttons {
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: start;
-    gap: 30px;
+    gap: 10px;
   }
 }/*# sourceMappingURL=style.css.map */

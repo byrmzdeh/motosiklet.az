@@ -123,30 +123,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
   });  
 
-  // closeButton.addEventListener('click', function () {
-  //   searchDiv.style.display = 'none'; 
-  //   view.style.display = 'flex';
-  // });
 
 
+  ///ResFilter 
+  const moto=document.getElementById('moto')
+  const mainShow = document.querySelector('.main-show')
+  const back = document.getElementById('back')
 
+  moto.addEventListener('click', function () {
+    mainShow.style.display='flex'
+    
+  })
 
-  // //search
-  // const searchIcon = document.getElementById('search-icon')
-  // const searchInput = document.getElementById('search-input')
-  // const show= document.getElementById('show')
-  // const close= document.getElementById('close')
-
-  // searchIcon.addEventListener('click', function(){
-  //   show.style.display='none'
-  //   searchInput.style.display='block'
-  // })
-
-  // close.addEventListener('click', function(){
-  //   show.style.display='flex'
-  //   searchInput.style.display='none'
-  // })
-
+  back.addEventListener('click', function(event){
+    event.preventDefault()
+    window.location.href='/index.html'
+  })
 
 
 
