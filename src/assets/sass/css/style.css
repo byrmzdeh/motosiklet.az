@@ -240,6 +240,7 @@ nav .view .res-menu .search-bar .searchIcon {
   justify-content: center;
   border: 1px solid rgb(218, 221, 218);
   border-radius: 6px;
+  cursor: pointer;
 }
 nav .view .res-menu .search-bar .searchIcon img {
   width: 20px;
@@ -258,28 +259,6 @@ nav .view .res-menu .search-bar #barIcon {
 nav .view .res-menu .search-bar #barIcon img {
   width: 20px;
   height: 24px;
-}
-nav .view .new {
-  width: 100%;
-  height: 44px;
-  background-color: rgb(47, 171, 50);
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-}
-nav .view .new .plus {
-  font-size: 22px;
-  font-weight: 800;
-  line-height: 24px;
-  color: white;
-}
-nav .view .new .elan {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  color: white;
 }
 nav .view #barMenu {
   width: 100%;
@@ -359,6 +338,80 @@ nav .view #barMenu .language #select-buttons .active p {
   line-height: 16px;
   font-weight: 400;
 }
+nav .view .new {
+  width: 100%;
+  height: 44px;
+  background-color: rgb(47, 171, 50);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+nav .view .new .plus {
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 24px;
+  color: white;
+}
+nav .view .new .elan {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: white;
+}
+nav .view #moto {
+  width: 100%;
+  height: 44px;
+  border-radius: 6px;
+  border: 1px solid var(--Color-Neutral-200, #DADDDA);
+  background: var(--Primitives-Surface-Low, #FFF);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+}
+nav .view #moto img {
+  width: 24px;
+  height: 24px;
+}
+nav .view #moto p {
+  color: var(--Primitives-Text-Neutral, #272A27);
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.08px;
+}
+nav .view #etrafli {
+  width: 100%;
+  height: 44px;
+  border-radius: 6px;
+  border: 1px solid var(--Color-Neutral-200, #DADDDA);
+  background: var(--Primitives-Surface-Low, #FFF);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+}
+nav .view #etrafli img {
+  width: 24px;
+  height: 24px;
+}
+nav .view #etrafli p {
+  color: var(--Primitives-Text-Neutral, #272A27);
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.08px;
+}
 nav #searchDiv {
   height: 65px;
   display: flex;
@@ -394,6 +447,128 @@ nav #searchDiv .search #input {
 }
 nav #searchDiv .search #closeSearch {
   cursor: pointer;
+}
+
+.filter-mainRes {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-color: red;
+  z-index: 4;
+  display: none;
+}
+.filter-mainRes #motoMenu {
+  max-width: 100%;
+  width: 100%;
+  background-color: white;
+  padding: 24px 16px;
+}
+.filter-mainRes #motoMenu .selects-vieww {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(170, 162, 162);
+  gap: 11px;
+}
+.filter-mainRes #motoMenu .selects-vieww .view {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.filter-mainRes #motoMenu .selects-vieww .view select {
+  width: 100%;
+  height: 44px;
+  padding: 10px;
+  outline: none;
+  border: none;
+}
+.filter-mainRes #motoMenu .selects-vieww .view .half-select {
+  display: flex;
+  gap: 10px;
+}
+.filter-mainRes #motoMenu .selects-vieww .view .three-select {
+  display: flex;
+  gap: 10px;
+}
+.filter-mainRes #motoMenu .selects-openn {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  height: 0px;
+  opacity: 0;
+  overflow: hidden;
+  transition: height 0.3s ease, opacity 0.3s ease;
+}
+.filter-mainRes #motoMenu .selects-openn .view {
+  width: 100%;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 8px;
+}
+.filter-mainRes #motoMenu .selects-openn .view select {
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  border: 1px solid var(--Primitives-Stroke-Neutral-Accent, #DADDDA);
+  background: var(--Primitives-Surface-Low, #FFF);
+}
+.filter-mainRes #motoMenu .selects-openn .view .half-select {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.filter-mainRes #motoMenu .selects-openn .view .half-select label {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid gray;
+  background: var(--Primitives-Surface-Low, #FFF);
+  display: flex;
+  padding: 10px;
+  gap: 10px;
+}
+.filter-mainRes #motoMenu .selects-openn .view .half-select label input[type=checkbox] {
+  width: 18px;
+  height: 18px;
+  appearance: none;
+  border-radius: 4px;
+  border: 1px solid var(--Color-Neutral-200, #DADDDA);
+  background: var(--Primary-Base-White, #FFF);
+  cursor: pointer;
+  position: relative;
+}
+.filter-mainRes #motoMenu .selects-openn .view .half-select label input[type=checkbox]:checked {
+  border-radius: 4px;
+  background: var(--Color-Primary-500, #2FAB32);
+}
+.filter-mainRes #motoMenu .selects-openn .view .half-select label input[type=checkbox]:checked::after {
+  content: url("/src/assets/image/filter/checked.png");
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+}
+.filter-mainRes #motoMenu .selects-openn .view .half-select .active {
+  border: 1px solid var(--Color-Primary-500, #2FAB32);
+}
+.filter-mainRes #motoMenu .selects-openn .view .three-select {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
 }
 
 .container {
@@ -435,8 +610,8 @@ nav #searchDiv .search #closeSearch {
   align-items: center;
   justify-content: center;
   border: none;
-  border-left: 1px solid rgb(132, 131, 131);
   background-color: transparent;
+  cursor: pointer;
 }
 .container .filter-main .filter-buttons .buttons-one button span {
   color: var(--Primitives-Text-Neutral, #272A27);
@@ -476,6 +651,7 @@ nav #searchDiv .search #closeSearch {
   padding: 0px 15px;
   display: flex;
   gap: 5px;
+  cursor: pointer;
 }
 .container .filter-main .filter-buttons .buttons-two button span {
   color: var(--Primitives-Text-Neutral, #272A27);
@@ -572,6 +748,30 @@ nav #searchDiv .search #closeSearch {
   padding: 10px;
   gap: 10px;
 }
+.container .filter-main .selects-open .view .half-select label input[type=checkbox] {
+  width: 18px;
+  height: 18px;
+  appearance: none;
+  border-radius: 4px;
+  border: 1px solid var(--Color-Neutral-200, #DADDDA);
+  background: var(--Primary-Base-White, #FFF);
+  cursor: pointer;
+  position: relative;
+}
+.container .filter-main .selects-open .view .half-select label input[type=checkbox]:checked {
+  border-radius: 4px;
+  background: var(--Color-Primary-500, #2FAB32);
+}
+.container .filter-main .selects-open .view .half-select label input[type=checkbox]:checked::after {
+  content: url("/src/assets/image/filter/checked.png");
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+}
 .container .filter-main .selects-open .view .half-select .active {
   border: 1px solid var(--Color-Primary-500, #2FAB32);
 }
@@ -591,6 +791,23 @@ nav #searchDiv .search #closeSearch {
   display: flex;
   gap: 10px;
 }
+.container .filter-main .readMore .today p {
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.07px;
+}
+.container .filter-main .readMore .today .day {
+  color: var(--Color-Primary-600, #249527);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.07px;
+}
 .container .filter-main .readMore .more-filter {
   width: 50%;
   display: flex;
@@ -598,11 +815,22 @@ nav #searchDiv .search #closeSearch {
   align-items: center;
   justify-content: end;
 }
+.container .filter-main .readMore .more-filter .zero {
+  color: var(--Color-Primary-600, #249527);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  text-decoration-line: underline;
+  line-height: 16px;
+  letter-spacing: 0.08px;
+}
 .container .filter-main .readMore .more-filter #more {
   min-width: 101px;
   height: 44px;
   padding: 10px;
+  border-radius: 6px;
   border: 1px solid var(--Color-Primary-500, #2FAB32);
+  background: var(--Color-White, #FFF);
   cursor: pointer;
 }
 .container .filter-main .readMore .more-filter #more span {
@@ -1784,6 +2012,10 @@ footer .footer-foot div p {
   nav #searchDiv .search #input {
     width: 84%;
   }
+  .filter-mainRes {
+    display: block;
+    top: 0px;
+  }
   footer .footer-head {
     padding: 35px 16px;
     display: flex;
@@ -1806,6 +2038,9 @@ footer .footer-foot div p {
   }
   .container {
     padding: 10px 16px;
+  }
+  .container .filter-main {
+    display: none;
   }
   .container .two {
     display: flex;
@@ -2046,22 +2281,26 @@ footer .footer-foot div p {
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   header {
-    padding: 10px 16px;
+    padding: 10px 40px;
   }
   nav .show {
+    display: none !important;
+  }
+  nav .view {
+    padding: 10px 40px;
+    display: flex !important;
+  }
+  nav #searchDiv {
     padding: 10px 16px;
   }
-  nav .show a img {
-    width: 150px;
-  }
-  nav .show .menu {
-    gap: 5px;
-  }
-  nav .show .menu ul {
-    gap: 12px;
+  nav #searchDiv .search #input {
+    width: 84%;
   }
   .container {
-    padding: 10px 16px;
+    padding: 10px 40px;
+  }
+  .container .filter-main {
+    display: none;
   }
   .container .two #twoCards {
     display: grid;
@@ -2079,22 +2318,40 @@ footer .footer-foot div p {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
-}
-@media (min-width: 1025px) and (max-width: 1265px) {
-  header {
+  footer .footer-head {
+    padding: 35px 40px;
+    display: flex;
+    align-items: center;
+  }
+  footer .footer-head .f-menu {
+    gap: 10px;
+  }
+  footer .footer-foot div {
     padding: 10px 40px;
   }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
   nav .show {
-    padding: 10px 40px;
+    display: flex;
+    gap: 50px;
   }
   nav .show .menu {
     display: flex;
-    gap: 20px;
+    gap: 10px;
   }
   nav .show .menu ul {
-    gap: 20px;
+    gap: 1px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
   nav .show .menu .search-new {
     gap: 10px;
+  }
+  .container .filter-main .filter-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 30px;
   }
 }/*# sourceMappingURL=style.css.map */
