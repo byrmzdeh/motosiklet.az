@@ -61,13 +61,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
   barIcon.addEventListener('click', function () {
     barMenu.style.display = 'block';
-    header.style.display='none'
+    header.style.display = 'none'
 
   })
 
   closeIcon.addEventListener('click', function () {
     barMenu.style.display = 'none';
-    header.style.display='flex'
+    header.style.display = 'flex'
 
 
   })
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
       openFilter.style.opacity = '1';
       readMoreFilter.textContent = 'Daha az filter';
     }
-    isFilterOpen=!isFilterOpen
+    isFilterOpen = !isFilterOpen
 
   });
 
@@ -97,51 +97,128 @@ document.addEventListener('DOMContentLoaded', function () {
   //Search
   const show = document.querySelector('.show');
   const searchDiv = document.getElementById('searchDiv');
-  const searchButton = document.querySelector('.search'); 
-  const closeButton = document.getElementById('closeSearch'); 
+  const searchButton = document.querySelector('.search');
+  const closeButton = document.getElementById('closeSearch');
 
   const view = document.querySelector('.view');
-  const searchButtonRes= document.querySelector('.searchIcon'); 
-  
+  const searchButtonRes = document.querySelector('.searchIcon');
+
 
   searchButton.addEventListener('click', function (event) {
     event.stopPropagation(); // Hadisənin qabarmasını dayandırır
-    searchDiv.style.display = 'block'; 
+    searchDiv.style.display = 'block';
     show.style.opacity = '0';
 
   });
 
   closeButton.addEventListener('click', function () {
-    searchDiv.style.display = 'none'; 
+    searchDiv.style.display = 'none';
     show.style.opacity = '1';
 
   });
 
   searchButtonRes.addEventListener('click', function () {
-    searchDiv.style.display = 'block'; 
+    searchDiv.style.display = 'block';
     show.style.opacity = '1';
 
-  });  
+  });
 
 
 
   ///ResFilter 
-  const moto=document.getElementById('moto')
+  const etrafli = document.getElementById('etrafli')
   const mainShow = document.querySelector('.main-show')
-  const back = document.getElementById('back')
+  const eBack = document.getElementById('eBack')
+
+  etrafli.addEventListener('click', function () {
+    mainShow.style.display = 'flex'
+
+  })
+
+  eBack.addEventListener('click', function () {
+    mainShow.style.display = 'none'
+
+  })
+
+
+
+  const moto = document.getElementById('moto')
+  const mainShowMoto = document.querySelector('.main-showMoto')
+  const eMoto = document.getElementById('eMoto')
 
   moto.addEventListener('click', function () {
-    mainShow.style.display='flex'
-    
+    mainShowMoto.style.display = 'flex'
+
   })
 
-  back.addEventListener('click', function(event){
-    event.preventDefault()
-    window.location.href='/index.html'
+  eMoto.addEventListener('click', function () {
+    mainShowMoto.style.display = 'none'
   })
 
+  const buttonOne = document.querySelectorAll('#buttons-one button');
+  const buttonTwo = document.querySelectorAll('#buttons-two button');
+
+  // Başlanğıcda birinci düyməyə 'active' sinfi əlavə edilir
+  buttonOne[0].classList.add('active');
+  buttonTwo[0].classList.add('mactive');
+
+  // Başlanğıcda birinci düymənin 'lineBtn' elementini gizləyirik
+  const firstButtonLine = buttonOne[0].querySelector('.lineBtn');
+  if (firstButtonLine) {
+    firstButtonLine.style.display = 'none';
+  }
+
+  buttonOne.forEach((button, index) => {
+    button.addEventListener('click', function () {
+      // Bütün düymələrdən 'active' sinfini silirik
+      buttonOne.forEach(btn => btn.classList.remove('active'));
+
+      // Bütün 'lineBtn' elementlərini idarə edirik
+      buttonOne.forEach(btn => {
+        const line = btn.querySelector('.lineBtn');
+        if (line) {
+          if (btn === this) {
+            // Klik olunan düymənin 'lineBtn' elementini gizləyirik
+            line.style.display = 'none';
+          } else {
+            // Digər düymələrdəki 'lineBtn' elementlərini göstəririk
+            line.style.display = 'block';
+          }
+        }
+      });
+
+      // Əgər 3-cü düyməyə klik olunubsa, 2-ci düymənin 'lineBtn' elementini gizləyirik
+      if (index === 2) {
+        const secondButtonLine = buttonOne[1].querySelector('.lineBtn');
+        if (secondButtonLine) {
+          secondButtonLine.style.display = 'none';
+        }
+      }
 
 
+      if (index === 1) {
+        const oneButtonLine = buttonOne[0].querySelector('.lineBtn');
+        const secondButtonLine = buttonOne[1].querySelector('.lineBtn');
+        if (secondButtonLine, oneButtonLine) {
+          oneButtonLine.style.display = 'none';
+          secondButtonLine.style.display = 'none';
+        }
+      }
+
+      // Klik olunan düyməyə 'active' sinfi əlavə edirik
+      this.classList.add('active');
+    });
+  });
+
+  buttonTwo.forEach(button => {
+    button.addEventListener('click', function () {
+      // Bütün düymələrdən 'mactive' sinfini silirik
+      buttonTwo.forEach(btn => btn.classList.remove('mactive'));
+
+      // Klik olunan düyməyə 'mactive' sinfi əlavə edirik
+      this.classList.add('mactive');
+    });
+  });
 
 
 
