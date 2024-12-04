@@ -23,33 +23,26 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(data => {
 
             const regularCards = data.slice(0, 24).map(item => `
-                <div class="card">
-                    <div class="imgDiv">
-                        <img class="imgMoto img1" src="${item.img.img1}" alt="err">
-                        <img class="imgMoto img2" src="${item.img.img2}" alt="err">
-                        <div class="heart">
-                            <img src="/src/assets/image/home/heart.png" alt="err">
+                 <div class="card">
+                            <div class="imgDiv">
+                                <img class="imgMoto img1" src="${item.img.img1}" alt="err">
+                                <img class="imgMoto img2" src="${item.img.img2}" alt="err">
+                                <div class="heart">
+                                    <img src="/src/assets/image/home/heart.png" alt="err">
+                                </div>
+                                <div class="crown">
+                                    <img src="/src/assets/image/home/crown.png" alt="">
+                                </div>
+                                <div class="premiumIcon">
+                                    <img src="/src/assets/image/home/cardPre.png" alt="err">
+                                </div>
+                            </div>
+                            <div class="information">
+                                <p class="name">${item.name}</p>
+                                <span>${item.type}</span>
+                                <h5>${item.price} AZN</h5>
+                            </div>
                         </div>
-                        <div class="crown">
-                            <img src="/src/assets/image/home/crown.png" alt="">
-                        </div>
-                        <div class="premiumIcon">
-                            <img src="/src/assets/image/home/cardPre.png" alt="err">
-                        </div>
-                    </div>
-                    <div class="information">
-                        <p class="name">${item.name}</p>
-                        <span>${item.type}</span>
-                        <div class="title">
-                            <p>${item.year}</p>
-                            <div class="line"></div>
-                            <p>${item.liter} L</p>
-                            <div class="line"></div>
-                            <p>${item.kilometer} km</p>
-                        </div>
-                        <h5>${item.price} AZN</h5>
-                    </div>
-                </div>
             `).join('');
 
 
@@ -57,33 +50,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
             readMore.addEventListener('click', function () {
                 const remainingCard = data.slice(24).map(item => `
-                      <div class="card">
-                    <div class="imgDiv">
-                        <img class="imgMoto img1" src="${item.img.img1}" alt="err">
-                        <img class="imgMoto img2" src="${item.img.img2}" alt="err">
-                        <div class="heart">
-                            <img src="/src/assets/image/home/heart.png" alt="err">
+                         <div class="card">
+                            <div class="imgDiv">
+                                <img class="imgMoto img1" src="${item.img.img1}" alt="err">
+                                <img class="imgMoto img2" src="${item.img.img2}" alt="err">
+                                <div class="heart">
+                                    <img src="/src/assets/image/home/heart.png" alt="err">
+                                </div>
+                                <div class="crown">
+                                    <img src="/src/assets/image/home/crown.png" alt="">
+                                </div>
+                                <div class="premiumIcon">
+                                    <img src="/src/assets/image/home/cardPre.png" alt="err">
+                                </div>
+                            </div>
+                            <div class="information">
+                                <p class="name">${item.name}</p>
+                                <span>${item.type}</span>
+                                <h5>${item.price} AZN</h5>
+                            </div>
                         </div>
-                        <div class="crown">
-                            <img src="/src/assets/image/home/crown.png" alt="">
-                        </div>
-                        <div class="premiumIcon">
-                            <img src="/src/assets/image/home/cardPre.png" alt="err">
-                        </div>
-                    </div>
-                    <div class="information">
-                        <p class="name">${item.name}</p>
-                        <span>${item.type}</span>
-                        <div class="title">
-                            <p>${item.year}</p>
-                            <div class="line"></div>
-                            <p>${item.liter} L</p>
-                            <div class="line"></div>
-                            <p>${item.kilometer} km</p>
-                        </div>
-                        <h5>${item.price} AZN</h5>
-                    </div>
-                </div>
                     `).join('')
 
                 fiveCards.innerHTML += remainingCard;
