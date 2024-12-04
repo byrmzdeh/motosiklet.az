@@ -4,11 +4,16 @@
     box-sizing: border-box;
     text-decoration: none;
 
+
     ul {
         li {
             list-style: none;
         }
     }
+}
+
+body{
+    background-color: #F7F8F7;
 }
 
 
@@ -144,6 +149,7 @@ header {
         .help {
             padding-right: 14px;
             border-right: 1px solid white;
+
             display: flex;
             align-items: center;
             justify-content: center;
@@ -2401,6 +2407,60 @@ nav {
             display: none;
         }
     }
+
+    #accordions {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 48px;
+        padding-top: 30px;
+
+        .accordion {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 0px;
+            margin-top: 10px;
+            cursor: pointer;
+
+
+            .question {
+                height: 56px;
+                padding: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-radius: 4px;
+                border-bottom: 1px solid #DADDDA;
+                background: var(--White, #FFF);
+
+            }
+
+            .answer {
+                height: 0px;
+                opacity: 0;
+                transition: 1s all;
+                background: var(--White, #FFF);
+
+
+                p {
+                    padding: 16px;
+                    opacity: 0;
+                    transition: 0s;
+                }
+            }
+
+
+            .answerClick {
+                opacity: 1;
+                height: 80px;
+
+                p {
+                    opacity: 1;
+                }
+            }
+
+        }
+    }
 }
 
 footer {
@@ -2673,6 +2733,7 @@ footer {
             flex-direction: column;
             align-items: start;
             gap: 24px;
+
             .text {
                 display: flex;
                 gap: 10px;
@@ -2688,7 +2749,7 @@ footer {
 
             }
 
-            .filters{
+            .filters {
                 width: 100%;
                 display: flex;
                 flex-direction: column;
@@ -2712,7 +2773,7 @@ footer {
             align-items: start;
             gap: 24px;
 
-            #readMore{
+            #readMore {
                 width: 100%;
             }
 
@@ -2791,7 +2852,7 @@ footer {
             align-items: start;
             gap: 24px;
 
-            #readMore{
+            #readMore {
                 width: 100%;
             }
 
@@ -2887,7 +2948,7 @@ footer {
             align-items: start;
             gap: 24px;
 
-            #readMore{
+            #readMore {
                 width: 100%;
             }
 
@@ -2964,7 +3025,7 @@ footer {
             align-items: start;
             gap: 24px;
 
-            #readMore{
+            #readMore {
                 width: 100%;
             }
 
@@ -3037,10 +3098,11 @@ footer {
             #footCards {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
-              
+
 
                 .card {
                     width: 100%;
+
                     ul {
                         width: 100%;
                         // display: flex;
