@@ -14,23 +14,15 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-    const premiumCards = document.getElementById('twoCards');
+    const fiveCards = document.getElementById('fiveCards');
+    const partsUrl = '/src/data/parts.json';
     const readMore = document.getElementById('readMore')
-    const premiumFetch = '/src/data/premium.json';
 
-    fetch(premiumFetch)
+    fetch(partsUrl)
         .then(res => res.json())
         .then(data => {
-            const premiumCard = `
-                <div class="special">
-                    <img src="/src/assets/image/home/premiumColor.png" alt="err">
-                    <p>Öz elanını premium et</p>
-                    <span>7 AZN-dan başlayaraq</span>
-                    <button>Premium et</button>
-                </div>
-            `;
 
-            const regularCards = data.slice(0, 35).map(item => `
+            const regularCards = data.slice(0, 24).map(item => `
                 <div class="card">
                     <div class="imgDiv">
                         <img class="imgMoto img1" src="${item.img.img1}" alt="err">
@@ -61,10 +53,10 @@ document.addEventListener('DOMContentLoaded', function () {
             `).join('');
 
 
-            premiumCards.innerHTML = premiumCard + regularCards;
+            fiveCards.innerHTML =  regularCards;
 
             readMore.addEventListener('click', function () {
-                const remainingCard = data.slice(35).map(item => `
+                const remainingCard = data.slice(24).map(item => `
                       <div class="card">
                     <div class="imgDiv">
                         <img class="imgMoto img1" src="${item.img.img1}" alt="err">
@@ -94,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
                     `).join('')
 
-                premiumCards.innerHTML += remainingCard;
+                fiveCards.innerHTML += remainingCard;
 
                 readMore.style.display = 'none';
 

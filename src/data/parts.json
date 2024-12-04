@@ -348,5 +348,15 @@
         "name":"BMW Yağ radiatoru",
         "type":"BMW motosikleti üçün yağ radiatoru",
         "price":50
+    },
+    {
+        "id":35,
+        "img":{
+            "img1":"/src/assets/image/home/partOne.png",
+            "img2":"/src/assets/image/home/partTwo.png"
+        },
+        "name":"BMW Yağ radiatoru",
+        "type":"BMW motosikleti üçün yağ radiatoru",
+        "price":50
     }
 ]

@@ -453,5 +453,18 @@
         "liter":0.3,
         "kilometer":5.000,
         "price":7500
+    },
+    {
+        "id":35,
+        "img":{
+            "img1":"/src/assets/image/home/motoOne.png",
+            "img2":"/src/assets/image/home/motoTwo.png"
+        },
+        "name":"Honda CB 125",
+        "type":"Sport bike",
+        "year":2023,
+        "liter":0.3,
+        "kilometer":5.000,
+        "price":7500
     }
 ]

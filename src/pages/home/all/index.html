@@ -1,11 +1,576 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All</title>
+    <title>Bütün elanlar</title>
+    <link rel="stylesheet" href="/src/assets/sass/css/style.css">
+    <script defer src="/src/assets/js/style.js"></script>
+    <script defer src="/src/pages/home/all/style.js"></script>
 </head>
+
 <body>
-    <h1>Bütün</h1>
+
+    <header id="header">
+        <div class="phone-lang">
+            <div class="phone">
+                <img src="/src/assets/image/nav/phone.png" alt="err">
+                <span>(012) 000 00 00</span>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-button">
+                    <p class="dropdown-text">Az</p>
+                    <img src="/src/assets/image/nav/select.png" alt="err">
+                </button>
+                <ul class="dropdown-menu">
+                    <li data-value="En">En</li>
+                    <li data-value="Ru">Ru</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="help-wish-login">
+            <a href="" class="help">
+                <img src="/src/assets/image/nav/question.png" alt="err">
+                <span>Yardım</span>
+            </a>
+            <a href="" class="wish">
+                <img src="/src/assets/image/nav/heart.png" alt="err">
+                <span>Seçilmişlər</span>
+            </a>
+            <a href="" class="login">
+                <img src="/src/assets/image/nav/user.png" alt="err">
+                <span>Giriş</span>
+            </a>
+        </div>
+    </header>
+
+    <nav>
+        <div class="show">
+            <a href="/index.html"><img src="/src/assets/image/nav/logo.png" alt="err"></a>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="">Bütün elanlar</a></li>
+                    <li><a href="">Salonlar</a></li>
+                    <li><a href="">Mağazalar</a></li>
+                    <li><a href="">Ehtiyat hissələri və aksesuarlar</a></li>
+                    <li><a href="">Bloq</a></li>
+                </ul>
+                <div class="search-new">
+                    <div class="search">
+                        <img src="/src/assets/image/nav/search.png" alt="err">
+                    </div>
+                    <div class="new">
+                        <span class="plus">+</span>
+                        <span class="elan">Yeni elan</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="view">
+
+            <div class="res-menu">
+                <a href="/index.html"><img src="/src/assets/image/nav/logo.png" alt="err"></a>
+                <div class="search-bar">
+                    <div class="searchIcon">
+                        <img src="/src/assets/image/nav/search.png" alt="err">
+                    </div>
+                    <div id="barIcon">
+                        <img src="/src/assets/image/nav/bar.png" alt="err">
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="new">
+                <span class="plus">+</span>
+                <span class="elan">Yeni elan</span>
+            </div>
+
+
+
+            <div id="barMenu">
+                <button id="close"><img src="/src/assets/image/nav/close.png" alt=""></button>
+                <ul>
+                    <li><a href="">Ana səhifə</a></li>
+                    <li><a href="">Bütün elanlar</a></li>
+                    <li><a href="">Salonlar</a></li>
+                    <li><a href="">Mağazalar</a></li>
+                    <li><a href="">Ehtiyat hissələri və aksesuarlar</a></li>
+                    <li><a href="">Bloq</a></li>
+                </ul>
+                <div class="language">
+                    <p>Dil</p>
+                    <div id="select-buttons">
+                        <button class="active">
+                            <p>Az</p>
+                        </button>
+                        <button>
+                            <p>Rus</p>
+                        </button>
+                        <button>
+                            <p>İng</p>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div id="searchDiv">
+            <div class="search">
+                <img src="/src/assets/image/nav/search.png" alt="err">
+                <input id="input" type="text" placeholder="Axtar">
+                <img id="closeSearch" src="/src/assets/image/nav/x.png" alt="err">
+            </div>
+        </div>
+
+
+
+
+    </nav>
+
+
+
+
+
+    <div class="container">
+        <div class="location">
+            <p class="homePage">Ana Səhifə</p>
+            <img src="/src/assets/image/home/caretRight.png" alt="err">
+            <p class="page">Bütün elanlar</p>
+
+        </div>
+
+        <div class="head">
+            <div class="text">
+                <h4>Bütün elanlar</h4>
+            </div>
+            <div class="filters">
+                <select name="" id="">
+                    <option value="">Tarixe gore</option>
+                </select>
+                <button id="openFilter">
+                    <img src="/src/assets/image/filter/horizontal.png" alt="err">
+                    <span>Filteri aç</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="filter-main" style="display: none;">
+        <div class="main-buttons">
+            <button id="moto">
+                <img src="/src/assets/image/filter/motorcycle.png" alt="">
+                <p>Moto növü</p>
+            </button>
+
+            <button id="etrafli">
+                <img src="/src/assets/image/filter/colorHorizontal.png" alt="">
+                <p>Ətraflı axtarış</p>
+            </button>
+        </div>
+
+        <div class="main-show">
+
+            <div class="back">
+                <img id="eBack" src="/src/assets/image/filter/back.png" alt="err">
+                <p>Ətraflı axtarış</p>
+            </div>
+
+
+            <div class="filter-buttons">
+                <div id="buttons-one">
+                    <button><span>Hamısı</span>
+                        <div class="lineBtn"></div>
+                    </button>
+                    <button><span>Yeni</span>
+                        <div class="lineBtn"></div>
+                    </button>
+                    <button><span>Sürülmüş</span></button>
+                </div>
+                <div id="buttons-two">
+                    <button><span>Hamısı</span></button>
+                    <button><img src="/src/assets/image/filter/one.png" alt="err"><span>Kvadrosikl (25)</span></button>
+                    <button><img src="/src/assets/image/filter/two.png" alt="err"><span>Moped (56)</span></button>
+                    <button><img src="/src/assets/image/filter/three.png" alt="err"><span>Motosiklet
+                            (320)</span></button>
+                </div>
+            </div>
+
+            <div class="selects-view">
+
+                <div class="view">
+                    <p>Şəhər</p>
+                    <select>
+                        <option value="">Hamisi</option>
+                        <option value="">A</option>
+                        <option value="">A</option>
+                        <option value="">A</option>
+                    </select>
+                </div>
+
+
+                <div class="view">
+                    <p>Marka</p>
+                    <select>
+                        <option value="">Hamisi</option>
+                        <option value="">A</option>
+                        <option value="">A</option>
+                        <option value="">A</option>
+                    </select>
+                </div>
+
+                <div class="view">
+                    <p>Model</p>
+                    <select>
+                        <option value="">Hamisi</option>
+                        <option value="">A</option>
+                        <option value="">A</option>
+                        <option value="">A</option>
+                    </select>
+                </div>
+
+                <div class="view">
+                    <p>İl</p>
+                    <div class="half-select">
+                        <select>
+                            <option value="">Min</option>
+                            <option value="">A</option>
+                            <option value="">A</option>
+                            <option value="">A</option>
+                        </select>
+                        <select>
+                            <option value="">Max</option>
+                            <option value="">A</option>
+                            <option value="">A</option>
+                            <option value="">A</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="view">
+                    <p>Qiymət</p>
+                    <div class="three-select">
+                        <select>
+                            <option value="">AZN</option>
+                            <option value="">A</option>
+                            <option value="">A</option>
+                            <option value="">A</option>
+                        </select>
+                        <select>
+                            <option value="">Max</option>
+                            <option value="">A</option>
+                            <option value="">A</option>
+                            <option value="">A</option>
+                        </select>
+                        <select>
+                            <option value="">Max</option>
+                            <option value="">A</option>
+                            <option value="">A</option>
+                            <option value="">A</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="view">
+                    <p>Yürüş</p>
+                    <div class="half-select">
+                        <select>
+                            <option value="">Min</option>
+                            <option value="">A</option>
+                            <option value="">A</option>
+                            <option value="">A</option>
+                        </select>
+                        <select>
+                            <option value="">Max</option>
+                            <option value="">A</option>
+                            <option value="">A</option>
+                            <option value="">A</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="view">
+                    <p>Həcm</p>
+                    <div class="half-select">
+                        <select>
+                            <option value="">Min</option>
+                            <option value="">A</option>
+                            <option value="">A</option>
+                            <option value="">A</option>
+                        </select>
+                        <select>
+                            <option value="">Max</option>
+                            <option value="">A</option>
+                            <option value="">A</option>
+                            <option value="">A</option>
+                        </select>
+                    </div>
+                </div>
+
+
+
+                <div class="view">
+                    <p>Mühərrik</p>
+                    <div class="half-select">
+                        <select>
+                            <option value="">Min</option>
+                            <option value="">A</option>
+                            <option value="">A</option>
+                            <option value="">A</option>
+                        </select>
+                        <select>
+                            <option value="">Max</option>
+                            <option value="">A</option>
+                            <option value="">A</option>
+                            <option value="">A</option>
+                        </select>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="selects-open">
+                <div class="view">
+                    <p>Sürətlər qutusu</p>
+                    <select>
+                        <option value="">Hamisi</option>
+                        <option value="">A</option>
+                        <option value="">A</option>
+                        <option value="">A</option>
+                    </select>
+                </div>
+
+
+                <div class="view">
+                    <p>Yanacaq növü</p>
+                    <select>
+                        <option value="">Hamisi</option>
+                        <option value="">A</option>
+                        <option value="">A</option>
+                        <option value="">A</option>
+                    </select>
+                </div>
+
+                <div class="view">
+                    <p>Rəng</p>
+                    <select>
+                        <option value="">Hamisi</option>
+                        <option value="">A</option>
+                        <option value="">A</option>
+                        <option value="">A</option>
+                    </select>
+                </div>
+
+                <div class="view">
+                    <p>Ötürücü</p>
+                    <select>
+                        <option value="">Hamisi</option>
+                        <option value="">A</option>
+                        <option value="">A</option>
+                        <option value="">A</option>
+                    </select>
+                </div>
+
+
+                <div class="view">
+                    <p>Gömrük</p>
+                    <select>
+                        <option value="">Hamisi</option>
+                        <option value="">A</option>
+                        <option value="">A</option>
+                        <option value="">A</option>
+                    </select>
+                </div>
+
+
+                <div class="view">
+                    <p>Zədə</p>
+                    <select>
+                        <option value="">Hamisi</option>
+                        <option value="">A</option>
+                        <option value="">A</option>
+                        <option value="">A</option>
+                    </select>
+                </div>
+
+
+                <div class="view">
+                    <p></p>
+                    <div class="half-select">
+                        <label class="active">
+                            <input type="checkbox" name="music" value="pop">
+                            <p>İcarə</p>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="music" value="pop">
+                            <p>Zəmanətli</p>
+                        </label>
+                    </div>
+                </div>
+
+
+                <div class="view">
+                    <p></p>
+                    <div class="half-select">
+                        <label>
+                            <input type="checkbox" name="music" value="pop">
+                            <p>Kredit</p>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="music" value="pop">
+                            <p>Barter</p>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="readMore">
+                <div class="today">
+                    <p>Bu gün</p>
+                    <span class="day">156 gün</span>
+                </div>
+                <div class="more-filter">
+                    <p class="zero">Sıfırla</p>
+                    <button id="more">Daha çox filter</button>
+                    <button id="search">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path
+                                d="M17.9424 17.0578L14.0306 13.1469C15.1644 11.7857 15.7298 10.0398 15.6091 8.27245C15.4884 6.50506 14.691 4.85223 13.3828 3.65779C12.0745 2.46335 10.3562 1.81926 8.58511 1.85951C6.81406 1.89976 5.12671 2.62125 3.87407 3.87389C2.62143 5.12654 1.89994 6.81389 1.85969 8.58493C1.81944 10.356 2.46353 12.0744 3.65797 13.3826C4.85241 14.6909 6.50524 15.4883 8.27263 15.6089C10.04 15.7296 11.7859 15.1642 13.1471 14.0305L17.058 17.9422C17.1161 18.0003 17.185 18.0463 17.2609 18.0778C17.3367 18.1092 17.4181 18.1254 17.5002 18.1254C17.5823 18.1254 17.6636 18.1092 17.7395 18.0778C17.8154 18.0463 17.8843 18.0003 17.9424 17.9422C18.0004 17.8841 18.0465 17.8152 18.0779 17.7393C18.1094 17.6634 18.1255 17.5821 18.1255 17.5C18.1255 17.4179 18.1094 17.3366 18.0779 17.2607C18.0465 17.1848 18.0004 17.1159 17.9424 17.0578ZM3.12518 8.75C3.12518 7.63748 3.45508 6.54995 4.07316 5.62492C4.69125 4.69989 5.56975 3.97892 6.59758 3.55318C7.62542 3.12744 8.75642 3.01604 9.84756 3.23309C10.9387 3.45013 11.941 3.98586 12.7277 4.77253C13.5143 5.5592 14.0501 6.56148 14.2671 7.65262C14.4841 8.74376 14.3727 9.87476 13.947 10.9026C13.5213 11.9304 12.8003 12.8089 11.8753 13.427C10.9502 14.0451 9.8627 14.375 8.75018 14.375C7.25884 14.3734 5.82906 13.7802 4.77453 12.7257C3.72 11.6711 3.12683 10.2413 3.12518 8.75Z"
+                                fill="white" />
+                        </svg>
+                        <span>Elanları göstər</span></button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="main-showMoto">
+
+            <div class="back">
+                <img id="eMoto" src="/src/assets/image/filter/back.png" alt="err">
+                <p>Moto Növü</p>
+            </div>
+
+
+            <div class="buttonsMoto">
+                <button>Hamısı</button>
+                <button>Kvadrosikl (25)</button>
+                <button>Moped (56)</button>
+                <button>Motosiklet (320)</button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <div class="container">
+        <section class="four">
+
+
+            <div id="fourCards">
+            </div>
+
+           <button id="readMore">Daha çox göstər</button>
+
+        </section>
+
+        
+    <div class="foot">
+        <div id="footCards">
+        </div>
+        <a href="">Daha çox</a>
+      </div>
+    </div>
+
+    <footer>
+        <div class="footer-head">
+          <div class="main">
+            <img class="logo" src="/src/assets/image/footer/logo.png" alt="err">
+            <div class="icons">
+              <div class='icon'>
+                <a href="https://x.com/"> <img src="/src/assets/image/footer/x.png" alt="err"></a>
+              </div>
+              <div class='icon'>
+                <a href="https://www.tiktok.com/"> <img src="/src/assets/image/footer/tiktok.png" alt="err"></a>
+              </div>
+              <div class='icon'>
+                <a href="https://www.instagram.com/"><img src="/src/assets/image/footer/instagram.png" alt="err"></a>
+              </div>
+              <div class='icon'>
+                <a href="https://www.facebook.com/"><img src="/src/assets/image/footer/facebook.png" alt="err"></a>
+              </div>
+    
+            </div>
+          </div>
+    
+          <div class="f-menu">
+            <ul>
+              <li><a href="/src/pages/home/all/index.html">Bütün elanlar</a></li>
+              <li><a href="/src/pages/home/all/index.html">Salonlar</a></li>
+              <li><a href="/src/pages/home/all/index.html">Mağazalar</a></li>
+            </ul>
+            <ul>
+              <li><a href="/src/pages/home/parts/index.html">Ehtiyat hissələri və aksesuarlar</a></li>
+              <li><a href="/src/pages/home/all/index.html">Bloq</a></li>
+              <li><a href="/src/pages/home/all/index.html">Qaydalar</a></li>
+            </ul>
+            <ul>
+              <li><a href="/src/pages/home/parts/index.html">Qanun</a></li>
+              <li><a href="/src/pages/home/all/index.html">İstifadəçi razılaşması</a></li>
+              <li><a href="/src/pages/home/all/index.html">Məxfilik siyasəti</a></li>
+            </ul>
+          </div>
+    
+          <div class="f-menuRes">
+            <ul>
+              <li><a href="/src/pages/home/all/index.html">Bütün elanlar</a></li>
+              <li><a href="/src/pages/home/all/index.html">Salonlar</a></li>
+              <li><a href="/src/pages/home/all/index.html">Mağazalar</a></li>
+              <li><a href="/src/pages/home/parts/index.html">Ehtiyat hissələri və aksesuarlar</a></li>
+              <li><a href="/src/pages/home/all/index.html">Bloq</a></li>
+              <li><a href="/src/pages/home/all/index.html">Qaydalar</a></li>
+              <li><a href="/src/pages/home/parts/index.html">Qanun</a></li>
+              <li><a href="/src/pages/home/all/index.html">İstifadəçi razılaşması</a></li>
+              <li><a href="/src/pages/home/all/index.html">Məxfilik siyasəti</a></li>
+            </ul>
+          </div>
+        </div>
+    
+        <div class="footer-foot">
+          <div>
+            <p>Saytın Administrasiyası reklam bannerlərinin və yerləşdirilmiş elanların məzmununa görə məsuliyyət daşımır.
+            </p>
+            <p>2024 Digital Classified MMC. VÖEN 1546846</p>
+          </div>
+        </div>
+    
+    
+      </footer>
+
+
+
 </body>
+
 </html>

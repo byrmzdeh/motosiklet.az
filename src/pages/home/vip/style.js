@@ -14,20 +14,20 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-    const premiumCards = document.getElementById('twoCards');
+    const threeCards = document.getElementById('threeCards');
+    const vipFetch = '/src/data/vip.json';
     const readMore = document.getElementById('readMore')
-    const premiumFetch = '/src/data/premium.json';
 
-    fetch(premiumFetch)
+    fetch(vipFetch)
         .then(res => res.json())
         .then(data => {
-            const premiumCard = `
-                <div class="special">
-                    <img src="/src/assets/image/home/premiumColor.png" alt="err">
-                    <p>Öz elanını premium et</p>
-                    <span>7 AZN-dan başlayaraq</span>
-                    <button>Premium et</button>
-                </div>
+            const vipCard = `
+                 <div class="special">
+                        <img src="/src/assets/image/home/vipColor.png" alt="err">
+                        <p>Öz elanını VIP et</p>
+                        <span>3 AZN-dan başlayaraq</span>
+                        <button>Premium et</button>
+                    </div>
             `;
 
             const regularCards = data.slice(0, 35).map(item => `
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
             `).join('');
 
 
-            premiumCards.innerHTML = premiumCard + regularCards;
+            threeCards.innerHTML = vipCard + regularCards;
 
             readMore.addEventListener('click', function () {
                 const remainingCard = data.slice(35).map(item => `
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
                     `).join('')
 
-                premiumCards.innerHTML += remainingCard;
+                threeCards.innerHTML += remainingCard;
 
                 readMore.style.display = 'none';
 
