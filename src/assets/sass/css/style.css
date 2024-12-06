@@ -176,7 +176,7 @@ nav .show .menu .search-new {
   align-items: center;
   gap: 16px;
 }
-nav .show .menu .search-new .search {
+nav .show .menu .search-new #search {
   width: 44px;
   height: 44px;
   display: flex;
@@ -186,7 +186,7 @@ nav .show .menu .search-new .search {
   border-radius: 6px;
   cursor: pointer;
 }
-nav .show .menu .search-new .search img {
+nav .show .menu .search-new #search img {
   width: 20px;
   height: 20px;
 }
@@ -378,7 +378,7 @@ nav #searchDiv {
   display: none;
   top: 0px;
 }
-nav #searchDiv .search {
+nav #searchDiv #search {
   height: 100%;
   width: 100%;
   padding: 1px 10px;
@@ -390,14 +390,14 @@ nav #searchDiv .search {
   border: 1px solid var(--Color-Neutral-200, #DADDDA);
   background: var(--Color-White, #FFF);
 }
-nav #searchDiv .search #input {
+nav #searchDiv #search #input {
   width: 95%;
   height: 100%;
   border: none;
   background-color: transparent;
   outline: none;
 }
-nav #searchDiv .search #closeSearch {
+nav #searchDiv #search #closeSearch {
   cursor: pointer;
 }
 
@@ -761,7 +761,7 @@ nav #searchDiv .search #closeSearch {
   font-weight: 400;
   line-height: 24px;
 }
-.filter-main .main-show .readMore .more-filter #search {
+.filter-main .main-show .readMore .more-filter .search {
   min-width: 133px;
   height: 44px;
   padding: 10px;
@@ -774,7 +774,7 @@ nav #searchDiv .search #closeSearch {
   border: none;
   cursor: pointer;
 }
-.filter-main .main-show .readMore .more-filter #search span {
+.filter-main .main-show .readMore .more-filter .search span {
   color: var(--Color-White, #FFF);
   text-align: center;
   font-family: Inter;
@@ -2039,18 +2039,26 @@ nav #searchDiv .search #closeSearch {
 .container #accordions {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 30px;
   gap: 48px;
-  padding-top: 30px;
 }
-.container #accordions .accordion {
+.container #accordions #oneAccordions,
+.container #accordions #twoAccordions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.container #accordions #oneAccordions .accordion,
+.container #accordions #twoAccordions .accordion {
   width: 100%;
   display: flex;
   flex-direction: column;
   padding: 0px;
-  margin-top: 10px;
   cursor: pointer;
 }
-.container #accordions .accordion .question {
+.container #accordions #oneAccordions .accordion .question,
+.container #accordions #twoAccordions .accordion .question {
   height: 56px;
   padding: 16px;
   display: flex;
@@ -2060,22 +2068,31 @@ nav #searchDiv .search #closeSearch {
   border-bottom: 1px solid #DADDDA;
   background: var(--White, #FFF);
 }
-.container #accordions .accordion .answer {
+.container #accordions #oneAccordions .accordion .answer,
+.container #accordions #twoAccordions .accordion .answer {
   height: 0px;
   opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
   transition: 1s all;
   background: var(--White, #FFF);
 }
-.container #accordions .accordion .answer p {
+.container #accordions #oneAccordions .accordion .answer p,
+.container #accordions #twoAccordions .accordion .answer p {
   padding: 16px;
   opacity: 0;
   transition: 0s;
 }
-.container #accordions .accordion .answerClick {
+.container #accordions #oneAccordions .accordion .answerClick,
+.container #accordions #twoAccordions .accordion .answerClick {
   opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
   height: 80px;
 }
-.container #accordions .accordion .answerClick p {
+.container #accordions #oneAccordions .accordion .answerClick p,
+.container #accordions #twoAccordions .accordion .answerClick p {
   opacity: 1;
 }
 
@@ -2208,7 +2225,7 @@ footer .footer-foot div p {
   nav #searchDiv {
     padding: 10px 16px;
   }
-  nav #searchDiv .search #input {
+  nav #searchDiv #search #input {
     width: 84%;
   }
   footer .footer-head {
@@ -2542,6 +2559,11 @@ footer .footer-foot div p {
   .container .foot a {
     display: block;
   }
+  .container #accordions {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   header {
@@ -2557,7 +2579,7 @@ footer .footer-foot div p {
   nav #searchDiv {
     padding: 10px 16px;
   }
-  nav #searchDiv .search #input {
+  nav #searchDiv #search #input {
     width: 84%;
   }
   .filter-main {
