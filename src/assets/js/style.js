@@ -78,29 +78,81 @@ document.addEventListener('DOMContentLoaded', function () {
   const searchDiv = document.getElementById('searchDiv');
   const searchButton = document.getElementById('search');
   const closeButton = document.getElementById('closeSearch');
-
+  const inputSearch = document.getElementById('input');
+  
   const view = document.querySelector('.view');
   const searchButtonRes = document.querySelector('.searchIcon');
-
-
+  
+  const searchApi = '/src/data/all.json';
+  
   searchButton.addEventListener('click', function (event) {
     event.stopPropagation(); // Hadisənin qabarmasını dayandırır
     searchDiv.style.display = 'block';
     show.style.opacity = '0';
-
   });
-
+  
   closeButton.addEventListener('click', function () {
     searchDiv.style.display = 'none';
     show.style.opacity = '1';
-
   });
-
+  
   searchButtonRes.addEventListener('click', function () {
     searchDiv.style.display = 'block';
     show.style.opacity = '1';
-
   });
+  
+  inputSearch.addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') {
+      const query = inputSearch.value.trim();
+  
+      if (query) {
+        // Fetch data from the search API
+        fetch(searchApi)
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.json();
+          })
+          .then((data) => {
+            // Filter results based on the query
+            const results = data.filter(item => item.name && item.name.toLowerCase().includes(query.toLowerCase()));
+  
+            // Redirect to the results page with the query
+            if (results.length > 0) {
+              // Pass results to the result page
+              localStorage.setItem('searchResults', JSON.stringify(results));
+              window.location.href = '/src/pages/result/index.html';
+            } else {
+              alert('No results found');
+            }
+          })
+          .catch((error) => {
+            console.error('There has been a problem with your fetch operation:', error);
+          });
+      }
+    }
+  });
+  
+  // On the result page
+  if (window.location.pathname === '/src/pages/result/index.html') {
+    const resultsContainer = document.getElementById('resultContainer'); // Ensure there is a div with this ID in your result HTML
+    const results = JSON.parse(localStorage.getItem('searchResults')) || [];
+  
+    if (resultsContainer) {
+      if (results.length > 0) {
+        results.forEach(item => {
+          const resultDiv = document.createElement('div');
+          resultDiv.className = 'result-item';
+          resultDiv.textContent = item.name;
+          resultsContainer.appendChild(resultDiv);
+        });
+      } else {
+        resultsContainer.innerHTML = '<p>No results found</p>';
+      }
+    }
+  }
+  
 
  ///Foot
  const footCards = document.getElementById('footCards');

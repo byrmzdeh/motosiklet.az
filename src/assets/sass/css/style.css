@@ -851,6 +851,7 @@ nav #searchDiv #search #closeSearch {
 }
 
 .container {
+  width: 100%;
   padding: 0px 130px;
 }
 .container .head {
@@ -858,6 +859,7 @@ nav #searchDiv #search #closeSearch {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 40px;
 }
 .container .head .text {
   display: flex;
@@ -943,6 +945,62 @@ nav #searchDiv #search #closeSearch {
   width: 24px;
   height: 24px;
 }
+.container .pageHead {
+  padding: 40px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.container .pageHead h4 {
+  color: var(--Primitives-Stroke-Primary, #092A0C);
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.08px;
+}
+.container .pageHead .categoryButtons {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  border-radius: 6px;
+  background-color: var(--Primitives-Surface-Mid, #F7F8F7);
+}
+.container .pageHead .categoryButtons button {
+  width: 118px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.container .pageHead .categoryButtons button span {
+  color: var(--Primitives-Text-Neutral, #272A27);
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.08px;
+}
+.container .pageHead .categoryButtons button .lineBtn {
+  width: 0.64px;
+  padding: 8px 0px;
+  height: 8px;
+  background-color: black;
+  display: flex;
+}
+.container .pageHead .categoryButtons .active {
+  border-radius: 5px;
+  background: var(--System-Backgrounds-SB-L-Primary, #FFF);
+  box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.12), 0px 3px 1px 0px rgba(0, 0, 0, 0.04);
+  border-left: none;
+  height: 30px;
+  color: #249527 !important;
+}
 .container .location {
   width: 100%;
   max-width: 100%;
@@ -950,7 +1008,7 @@ nav #searchDiv #search #closeSearch {
   align-items: center;
   justify-content: start;
   gap: 10px;
-  padding: 20px 0px 42px 0px;
+  padding: 20px 0px 0px 0px;
 }
 .container .location .homePage {
   color: var(--Primitives-Text-Secondary, #616861);
@@ -970,6 +1028,15 @@ nav #searchDiv #search #closeSearch {
   line-height: 150%;
   letter-spacing: 0.08px;
 }
+.container .location #name {
+  color: var(--Primitives-Text-Primary, #092A0C);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.08px;
+}
 .container .location img {
   width: 16px;
   height: 16px;
@@ -977,7 +1044,7 @@ nav #searchDiv #search #closeSearch {
 .container .one {
   max-width: 100%;
   width: 100%;
-  margin-top: 60px;
+  margin: 40px auto;
 }
 .container .one img {
   width: 100%;
@@ -1521,7 +1588,7 @@ nav #searchDiv #search #closeSearch {
 .container .four {
   max-width: 100%;
   width: 100%;
-  margin-top: 60px;
+  margin: 40px auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2095,6 +2162,337 @@ nav #searchDiv #search #closeSearch {
 .container #accordions #twoAccordions .accordion .answerClick p {
   opacity: 1;
 }
+.container #salonCards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 0px 0px;
+}
+.container #salonCards .salonCard {
+  width: 100%;
+  min-height: 180px;
+  height: 100%;
+  padding: 12px;
+  background-color: white;
+  display: flex;
+  align-items: start;
+  gap: 16px;
+}
+.container #salonCards .salonCard .write {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.container #salonCards .salonCard .write h5 {
+  color: var(--Primitives-Text-Neutral, #272A27);
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.container #salonCards .salonCard .write p {
+  color: var(--Primitives-Text-Secondary, #616861);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.08px;
+}
+.container #salonCards .salonCard .write span {
+  color: var(--Color-Primary-500, #2FAB32);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.08px;
+  padding-top: 4px;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+.container #storeCards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.container #storeCards .salonCard {
+  width: 100%;
+  min-height: 180px;
+  height: 100%;
+  padding: 12px;
+  background-color: white;
+  display: flex;
+  align-items: start;
+  gap: 16px;
+}
+.container #storeCards .salonCard .write {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.container #storeCards .salonCard .write h5 {
+  color: var(--Primitives-Text-Neutral, #272A27);
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.container #storeCards .salonCard .write p {
+  color: var(--Primitives-Text-Secondary, #616861);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.08px;
+}
+.container #storeCards .salonCard .write span {
+  color: var(--Color-Primary-500, #2FAB32);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.08px;
+  padding-top: 4px;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+.container #cardsMore {
+  height: 44px;
+  min-width: 340px;
+  margin: 40px auto;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  align-self: stretch;
+  border-radius: 6px;
+  border: 1px solid var(--Color-Primary-500, #2FAB32);
+  background: var(--Color-White, #FFF);
+  color: var(--Color-Primary-900, #1A4D1C);
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.08px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.container #cardsMore:hover {
+  background-color: #2FAB32;
+  color: #FFF;
+}
+.container #salonDetail {
+  width: 100%;
+  display: flex;
+  gap: 24px;
+  margin: 24px auto;
+}
+.container #salonDetail .detailCard {
+  max-width: 864px;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--Color-Neutral-200, #DADDDA);
+  background: var(--Color-White, #FFF);
+  display: flex;
+  padding: 16px;
+  align-items: center;
+  gap: 32px;
+}
+.container #salonDetail .detailCard .cardImg {
+  min-width: 240px;
+}
+.container #salonDetail .detailCard .write {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+}
+.container #salonDetail .detailCard .write h4 {
+  color: var(--Primitives-Text-Neutral, #272A27);
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.08px;
+}
+.container #salonDetail .detailCard .write p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.container #salonDetail .detailCard .write p span {
+  color: var(--Color-Neutral-400, #A0A6A0);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.07px;
+}
+.container #salonDetail .detailCard .write span {
+  color: var(--Primitives-Text-Secondary, #616861);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.08px;
+}
+.container #salonDetail .locationCard {
+  border-radius: 10px;
+  border: 1px solid var(--Color-Neutral-200, #DADDDA);
+  background: var(--Color-White, #FFF);
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 16px;
+}
+.container #salonDetail .locationCard h5 {
+  color: var(--Primitives-Text-Neutral, #272A27);
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.container #salonDetail .locationCard div {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.container #salonDetail .locationCard div img {
+  width: 20px;
+  height: 20px;
+}
+.container #salonDetail .locationCard div span {
+  color: var(--Primitives-Text-Secondary, #616861);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.07px;
+}
+.container #storeDetail {
+  width: 100%;
+  display: flex;
+  gap: 24px;
+  margin: 24px auto;
+}
+.container #storeDetail .detailCard {
+  max-width: 864px;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--Color-Neutral-200, #DADDDA);
+  background: var(--Color-White, #FFF);
+  display: flex;
+  padding: 16px;
+  align-items: center;
+  gap: 32px;
+}
+.container #storeDetail .detailCard .cardImg {
+  min-width: 240px;
+}
+.container #storeDetail .detailCard .write {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+}
+.container #storeDetail .detailCard .write h4 {
+  color: var(--Primitives-Text-Neutral, #272A27);
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.08px;
+}
+.container #storeDetail .detailCard .write p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.container #storeDetail .detailCard .write p span {
+  color: var(--Color-Neutral-400, #A0A6A0);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.07px;
+}
+.container #storeDetail .detailCard .write span {
+  color: var(--Primitives-Text-Secondary, #616861);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.08px;
+}
+.container #storeDetail .locationCard {
+  border-radius: 10px;
+  border: 1px solid var(--Color-Neutral-200, #DADDDA);
+  background: var(--Color-White, #FFF);
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 16px;
+}
+.container #storeDetail .locationCard h5 {
+  color: var(--Primitives-Text-Neutral, #272A27);
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.container #storeDetail .locationCard div {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.container #storeDetail .locationCard div img {
+  width: 20px;
+  height: 20px;
+}
+.container #storeDetail .locationCard div span {
+  color: var(--Primitives-Text-Secondary, #616861);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.07px;
+}
 
 footer {
   max-width: 100%;
@@ -2564,6 +2962,73 @@ footer .footer-foot div p {
     grid-template-columns: repeat(1, 1fr);
     gap: 10px;
   }
+  .container #salonCards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .container #salonCards .salonCard {
+    display: flex;
+    flex-direction: column;
+  }
+  .container #salonCards .salonCard img {
+    width: 100%;
+    height: 100%;
+  }
+  .container #cardsMore {
+    width: 100%;
+  }
+  .container #salonDetail {
+    display: flex;
+    flex-direction: column;
+  }
+  .container #salonDetail .detailCard {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+  }
+  .container #salonDetail .detailCard .cardImg {
+    width: 100%;
+  }
+  .container #salonDetail .locationCard {
+    width: 100%;
+  }
+  .container #salonDetail .locationCard div {
+    width: 100%;
+  }
+  .container #storeCards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .container #storeCards .salonCard {
+    display: flex;
+    flex-direction: column;
+  }
+  .container #storeCards .salonCard img {
+    width: 100%;
+    height: 100%;
+  }
+  .container #storeDetail {
+    display: flex;
+    flex-direction: column;
+  }
+  .container #storeDetail .detailCard {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+  }
+  .container #storeDetail .detailCard .cardImg {
+    width: 100%;
+  }
+  .container #storeDetail .locationCard {
+    width: 100%;
+  }
+  .container #storeDetail .locationCard div {
+    width: 100%;
+  }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   header {
@@ -2629,6 +3094,52 @@ footer .footer-foot div p {
   .container .five #fiveCards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+  .container #salonCards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .container #salonDetail {
+    display: flex;
+  }
+  .container #salonDetail .detailCard {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+  }
+  .container #salonDetail .detailCard .cardImg {
+    width: 100%;
+  }
+  .container #salonDetail .locationCard {
+    width: 100%;
+  }
+  .container #salonDetail .locationCard div {
+    width: 100%;
+  }
+  .container #storeCards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .container #storeDetail {
+    display: flex;
+  }
+  .container #storeDetail .detailCard {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+  }
+  .container #storeDetail .detailCard .cardImg {
+    width: 100%;
+  }
+  .container #storeDetail .locationCard {
+    width: 100%;
+  }
+  .container #storeDetail .locationCard div {
+    width: 100%;
   }
   footer .footer-head {
     padding: 35px 40px;

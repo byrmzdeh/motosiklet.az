@@ -1018,6 +1018,7 @@ nav {
 }
 
 .container {
+    width: 100%;
     padding: 0px 130px;
 
     .head {
@@ -1025,6 +1026,8 @@ nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding-top: 40px;
+
 
         .text {
             display: flex;
@@ -1122,6 +1125,74 @@ nav {
         }
     }
 
+
+    .pageHead{
+        padding:40px 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        h4 {
+            color: var(--Primitives-Stroke-Primary, #092A0C);
+            font-family: Inter;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.08px;
+
+        }
+
+        .categoryButtons {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            border-radius: 6px;
+            background-color: var(--Primitives-Surface-Mid, #F7F8F7);
+    
+            button {
+                width: 118px;
+                height: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+    
+                span {
+                    color: var(--Primitives-Text-Neutral, #272A27);
+                    text-align: center;
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    letter-spacing: 0.08px;
+    
+                }
+    
+                .lineBtn {
+                    width: 0.64px;
+                    padding: 8px 0px;
+                    height: 8px;
+                    background-color: black;
+                    display: flex;
+    
+                }
+            }
+    
+            .active {
+                border-radius: 5px;
+                background: var(--System-Backgrounds-SB-L-Primary, #FFF);
+                box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.12), 0px 3px 1px 0px rgba(0, 0, 0, 0.04);
+                border-left: none;
+                height: 30px;
+                color: #249527 !important;
+    
+            }
+        }
+    }
+
+
     .location {
         width: 100%;
         max-width: 100%;
@@ -1129,7 +1200,7 @@ nav {
         align-items: center;
         justify-content: start;
         gap: 10px;
-        padding: 20px 0px 42px 0px;
+        padding: 20px 0px 0px 0px;
 
         .homePage {
             color: var(--Primitives-Text-Secondary, #616861);
@@ -1152,6 +1223,16 @@ nav {
             letter-spacing: 0.08px;
         }
 
+        #name {
+            color: var(--Primitives-Text-Primary, #092A0C);
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            letter-spacing: 0.08px;
+        }
+
         img {
             width: 16px;
             height: 16px;
@@ -1163,7 +1244,7 @@ nav {
     .one {
         max-width: 100%;
         width: 100%;
-        margin-top: 60px;
+        margin: 40px auto;
 
         img {
             width: 100%;
@@ -1793,7 +1874,7 @@ nav {
     .four {
         max-width: 100%;
         width: 100%;
-        margin-top: 60px;
+        margin: 40px auto;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -2473,6 +2554,401 @@ nav {
             }
         }
     }
+
+
+
+    #salonCards {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 0px 0px;
+
+        .salonCard {
+            width: 100%;
+            min-height: 180px;
+            height: 100%;
+            padding: 12px;
+            background-color: white;
+            display: flex;
+            align-items: start;
+            gap: 16px;
+
+            // img{
+            //     min-height: 159px;
+            //     height: 90%;
+            //     min-width: 187px;
+            //     width: 150%;
+            // }
+
+            .write {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                h5 {
+                    color: var(--Primitives-Text-Neutral, #272A27);
+                    font-family: Inter;
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+
+                p {
+                    color: var(--Primitives-Text-Secondary, #616861);
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+                    letter-spacing: 0.08px;
+                }
+
+                span {
+                    color: var(--Color-Primary-500, #2FAB32);
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+                    letter-spacing: 0.08px;
+                    padding-top: 4px;
+                    text-decoration-line: underline;
+                    text-decoration-style: solid;
+                    text-decoration-skip-ink: none;
+                    text-decoration-thickness: auto;
+                    text-underline-offset: auto;
+                    text-underline-position: from-font;
+                }
+            }
+
+        }
+    }
+
+
+    #storeCards {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+
+        .salonCard {
+            width: 100%;
+            min-height: 180px;
+            height: 100%;
+            padding: 12px;
+            background-color: white;
+            display: flex;
+            align-items: start;
+            gap: 16px;
+
+        
+
+            .write {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                h5 {
+                    color: var(--Primitives-Text-Neutral, #272A27);
+                    font-family: Inter;
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+
+                p {
+                    color: var(--Primitives-Text-Secondary, #616861);
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+                    letter-spacing: 0.08px;
+                }
+
+                span {
+                    color: var(--Color-Primary-500, #2FAB32);
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+                    letter-spacing: 0.08px;
+                    padding-top: 4px;
+                    text-decoration-line: underline;
+                    text-decoration-style: solid;
+                    text-decoration-skip-ink: none;
+                    text-decoration-thickness: auto;
+                    text-underline-offset: auto;
+                    text-underline-position: from-font;
+                }
+            }
+
+        }
+    }
+
+    #cardsMore {
+        height: 44px;
+        min-width: 340px;
+        margin: 40px auto;
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        align-self: stretch;
+        border-radius: 6px;
+        border: 1px solid var(--Color-Primary-500, #2FAB32);
+        background: var(--Color-White, #FFF);
+        color: var(--Color-Primary-900, #1A4D1C);
+        text-align: center;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: 0.08px;
+        transition: 0.3s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #2FAB32;
+            color: #FFF;
+        }
+
+
+    }
+
+    #salonDetail {
+        width: 100%;
+        display: flex;
+        gap: 24px;
+        margin: 24px auto;
+
+        .detailCard {
+            max-width: 864px;
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid var(--Color-Neutral-200, #DADDDA);
+            background: var(--Color-White, #FFF);
+            display: flex;
+            padding: 16px;
+            align-items: center;
+            gap: 32px;
+
+            .cardImg {
+                min-width: 240px;
+               
+            }
+
+            .write {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                gap: 10px;
+
+                h4 {
+                    color: var(--Primitives-Text-Neutral, #272A27);
+                    font-family: Inter;
+                    font-size: 32px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    letter-spacing: 0.08px;
+
+                }
+
+                p {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 6px;
+
+                    span {
+                        color: var(--Color-Neutral-400, #A0A6A0);
+                        font-family: Inter;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 150%;
+                        letter-spacing: 0.07px;
+                    }
+                }
+
+                span {
+                    color: var(--Primitives-Text-Secondary, #616861);
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+                    letter-spacing: 0.08px;
+                }
+            }
+
+        }
+
+        .locationCard {
+            border-radius: 10px;
+            border: 1px solid var(--Color-Neutral-200, #DADDDA);
+            background: var(--Color-White, #FFF);
+            display: flex;
+            flex-direction: column;
+            padding: 16px;
+            gap: 16px;
+
+            h5 {
+                color: var(--Primitives-Text-Neutral, #272A27);
+                font-family: Inter;
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+            }
+
+            div {
+                width: 70%;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+
+                span {
+                    color: var(--Primitives-Text-Secondary, #616861);
+                    font-family: Inter;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+                    letter-spacing: 0.07px;
+                }
+            }
+
+        }
+    }
+
+    #storeDetail {
+        width: 100%;
+        display: flex;
+        gap: 24px;
+        margin: 24px auto;
+
+        .detailCard {
+            max-width: 864px;
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid var(--Color-Neutral-200, #DADDDA);
+            background: var(--Color-White, #FFF);
+            display: flex;
+            padding: 16px;
+            align-items: center;
+            gap: 32px;
+
+            .cardImg {
+              min-width: 240px;
+               
+            }
+
+            .write {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                gap: 10px;
+
+                h4 {
+                    color: var(--Primitives-Text-Neutral, #272A27);
+                    font-family: Inter;
+                    font-size: 32px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    letter-spacing: 0.08px;
+
+                }
+
+                p {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 6px;
+
+                    span {
+                        color: var(--Color-Neutral-400, #A0A6A0);
+                        font-family: Inter;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 150%;
+                        letter-spacing: 0.07px;
+                    }
+                }
+
+                span {
+                    color: var(--Primitives-Text-Secondary, #616861);
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+                    letter-spacing: 0.08px;
+                }
+            }
+
+        }
+
+        .locationCard {
+            border-radius: 10px;
+            border: 1px solid var(--Color-Neutral-200, #DADDDA);
+            background: var(--Color-White, #FFF);
+            display: flex;
+            flex-direction: column;
+            padding: 16px;
+            gap: 16px;
+
+            h5 {
+                color: var(--Primitives-Text-Neutral, #272A27);
+                font-family: Inter;
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+            }
+
+            div {
+                width: 70%;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+
+                span {
+                    color: var(--Primitives-Text-Secondary, #616861);
+                    font-family: Inter;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+                    letter-spacing: 0.07px;
+                }
+            }
+
+        }
+    }
 }
 
 footer {
@@ -3136,6 +3612,97 @@ footer {
             gap: 10px;
 
         }
+
+
+
+        #salonCards {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+
+            .salonCard {
+                display: flex;
+                flex-direction: column;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        #cardsMore {
+            width: 100%;
+        }
+
+        #salonDetail {
+            display: flex;
+            flex-direction: column;
+
+            .detailCard {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: start;
+
+                .cardImg{
+                    width: 100%;
+                
+                }
+
+            }
+
+            .locationCard {
+                width: 100%;
+
+                div {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        #storeCards {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+
+            .salonCard {
+                display: flex;
+                flex-direction: column;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        #storeDetail {
+            display: flex;
+            flex-direction: column;
+
+            .detailCard {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: start;
+
+                .cardImg{
+                    width: 100%;
+                
+                }
+
+            }
+
+            .locationCard {
+                width: 100%;
+
+                div {
+                    width: 100%;
+                }
+            }
+        }
     }
 }
 
@@ -3241,6 +3808,70 @@ footer {
             }
         }
 
+
+        #salonCards {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+
+        }
+
+        #salonDetail {
+            display: flex;
+
+            .detailCard {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: start;
+                .cardImg{
+                    width: 100%;
+                }
+
+            }
+
+            .locationCard {
+                width: 100%;
+
+                div {
+                    width: 100%;
+                }
+            }
+        }
+
+
+
+        
+        #storeCards {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+
+        }
+
+        #storeDetail {
+            display: flex;
+
+            .detailCard {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: start;
+                .cardImg{
+                    width: 100%;
+                }
+
+            }
+
+            .locationCard {
+                width: 100%;
+
+                div {
+                    width: 100%;
+                }
+            }
+        }
+
     }
 
     footer {
@@ -3304,6 +3935,8 @@ footer {
             }
         }
     }
+
+
 
 
 }
