@@ -73,85 +73,98 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 
 
-  //Search
-  const show = document.querySelector('.show');
-  const searchDiv = document.getElementById('searchDiv');
+  //Searchconst searchDiv = document.getElementById('searchDiv');
   const searchButton = document.getElementById('search');
   const closeButton = document.getElementById('closeSearch');
   const inputSearch = document.getElementById('input');
-  
-  const view = document.querySelector('.view');
-  const searchButtonRes = document.querySelector('.searchIcon');
-  
+  const searchName = document.getElementById('searchName');
+  const searchDiv = document.getElementById('searchDiv'); 
+  const resultContainerNull = document.getElementById('resultContainer')
+  const readResultBtn = document.getElementById('readResultBtn')
+  const resultButtons = document.querySelectorAll('#resultButtons button');
+  const filtersResult = document.querySelector('.filtersResult select');
+
+
+
   const searchApi = '/src/data/all.json';
   
+  // Axtarış div-i açmaq
   searchButton.addEventListener('click', function (event) {
-    event.stopPropagation(); // Hadisənin qabarmasını dayandırır
+    event.stopPropagation();
     searchDiv.style.display = 'block';
-    show.style.opacity = '0';
   });
   
+  // Axtarış div-i bağlamaq
   closeButton.addEventListener('click', function () {
     searchDiv.style.display = 'none';
-    show.style.opacity = '1';
   });
   
-  searchButtonRes.addEventListener('click', function () {
-    searchDiv.style.display = 'block';
-    show.style.opacity = '1';
-  });
-  
+  // Input-da axtarış sorğusunu izləmək
   inputSearch.addEventListener('keydown', function (event) {
     if (event.key === 'Enter') {
-      const query = inputSearch.value.trim();
+      const query = inputSearch.value.trim(); 
   
       if (query) {
-        // Fetch data from the search API
+        // Sorğunu localStorage-da saxla
+        localStorage.setItem('searchQuery', query);
+  
+        // Fetch ilə məlumatları API-dən əldə et
         fetch(searchApi)
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error('Network response was not ok');
-            }
-            return response.json();
-          })
+          .then(response => response.json())
           .then((data) => {
-            // Filter results based on the query
             const results = data.filter(item => item.name && item.name.toLowerCase().includes(query.toLowerCase()));
   
-            // Redirect to the results page with the query
+            // Nəticələri saxla və nəticələr səhifəsinə yönləndir
             if (results.length > 0) {
-              // Pass results to the result page
               localStorage.setItem('searchResults', JSON.stringify(results));
               window.location.href = '/src/pages/result/index.html';
-            } else {
-              alert('No results found');
+            } 
+            else {
+              confirm(`"${query}" üzrə axtarış nəticəsi tapılmadı`);
+              searchName.textContent = `"${query}" üzrə axtarış nəticəsi tapılmadı`;
+              resultContainerNull.style.display='none'
+              readResultBtn.style.display='none'
+              filtersResult.style.display = 'none'; // "Read More" düyməsini gizlət
+              resultButtons.forEach(button => button.style.display = 'none'); // Buttons gizlədilir
+
             }
           })
           .catch((error) => {
-            console.error('There has been a problem with your fetch operation:', error);
+            console.error('Fetch əməliyyatında problem oldu:', error);
           });
       }
     }
   });
   
-  // On the result page
-  if (window.location.pathname === '/src/pages/result/index.html') {
-    const resultsContainer = document.getElementById('resultContainer'); // Ensure there is a div with this ID in your result HTML
-    const results = JSON.parse(localStorage.getItem('searchResults')) || [];
-  
-    if (resultsContainer) {
-      if (results.length > 0) {
-        results.forEach(item => {
-          const resultDiv = document.createElement('div');
-          resultDiv.className = 'result-item';
-          resultDiv.textContent = item.name;
-          resultsContainer.appendChild(resultDiv);
-        });
-      } else {
-        resultsContainer.innerHTML = '<p>No results found</p>';
-      }
+  // Input dəyişildikdə axtarış başlığını yenilə
+  inputSearch.addEventListener('input', () => {
+    const query = inputSearch.value.trim(); // Axtarış sorğusunu əldə edirik
+    
+    if (query) {
+      // Əgər axtarış sorğusu varsa
+      searchName.textContent = `"${query}" üzrə axtarış nəticəsi`;
+      searchName.style.display = 'block'; // Axtarış başlığını göstər
+    } else {
+      // Əgər axtarış sorğusu boşdursa
+      searchName.textContent = `"${query}" üzrə axtarış nəticəsi tapılmadı`;
+      searchName.style.display = 'block'; // Başlıq göstərilsin
+      resultContainerNull.style.display = 'none'; // Nəticə konteynerini gizlət
+      readResultBtn.style.display = 'none'; // "Read More" düyməsini gizlət
+      filtersResult.style.display = 'none'; // "Read More" düyməsini gizlət
+      resultButtons.forEach(button => button.style.display = 'none'); // Nəticə düymələrini gizlət
     }
-  }
+  
+    // Əgər query boşdursa, searchName gizlədilsin
+    if (query === '') {
+      searchName.style.display = 'none'; // Başlıq gizlədilsin
+    }
+  });
+  
+  
+
+
+  
+  
   
 
  ///Foot

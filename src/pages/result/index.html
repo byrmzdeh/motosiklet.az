@@ -1,16 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/assets/sass/css/style.css">
     <script defer src="/src/pages/result/style.js"></script>
+    <script defer src="/src/assets/js/style.js"></script>
 </head>
+
 <body>
+    <header id="header">
+        <div class="phone-lang">
+            <div class="phone">
+                <img src="/src/assets/image/nav/phone.png" alt="err">
+                <span>(012) 000 00 00</span>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-button">
+                    <p class="dropdown-text">Az</p>
+                    <img src="/src/assets/image/nav/select.png" alt="err">
+                </button>
+                <ul class="dropdown-menu">
+                    <li data-value="En">En</li>
+                    <li data-value="Ru">Ru</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="help-wish-login">
+            <a href="" class="help">
+                <img src="/src/assets/image/nav/question.png" alt="err">
+                <span>Yardım</span>
+            </a>
+            <a href="" class="wish">
+                <img src="/src/assets/image/nav/heart.png" alt="err">
+                <span>Seçilmişlər</span>
+            </a>
+            <a href="" class="login">
+                <img src="/src/assets/image/nav/user.png" alt="err">
+                <span>Giriş</span>
+            </a>
+        </div>
+    </header>
+
+    <nav>
+        <div class="show">
+            <a href="/index.html"><img src="/src/assets/image/nav/logo.png" alt="err"></a>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="/src/pages/home/all/index.html">Bütün elanlar</a></li>
+                    <li><a href="/src/pages/salon/index.html">Salonlar</a></li>
+                    <li><a href="/src/pages/store/index.html">Mağazalar</a></li>
+                    <li><a href="/src/pages/home/parts/index.html">Ehtiyat hissələri və aksesuarlar</a></li>
+                    <li><a href="/src/pages/blog/index.html">Bloq</a></li>
+                </ul>
+                <div class="search-new">
+                    <div id="search">
+                        <img src="/src/assets/image/nav/search.png" alt="err">
+                    </div>
+                    <div class="new">
+                        <span class="plus">+</span>
+                        <span class="elan">Yeni elan</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="view">
+
+            <div class="res-menu">
+                <a href="/index.html"><img src="/src/assets/image/nav/logo.png" alt="err"></a>
+                <div class="search-bar">
+                    <div class="searchIcon">
+                        <img src="/src/assets/image/nav/search.png" alt="err">
+                    </div>
+                    <div id="barIcon">
+                        <img src="/src/assets/image/nav/bar.png" alt="err">
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="new">
+                <span class="plus">+</span>
+                <span class="elan">Yeni elan</span>
+            </div>
+
+
+
+            <div id="barMenu">
+                <button id="close"><img src="/src/assets/image/nav/close.png" alt=""></button>
+                <ul>
+                    <li><a href="/src/pages/home/all/index.html">Bütün elanlar</a></li>
+                    <li><a href="/src/pages/salon/index.html">Salonlar</a></li>
+                    <li><a href="/src/pages/store/index.html">Mağazalar</a></li>
+                    <li><a href="/src/pages/home/parts/index.html">Ehtiyat hissələri və aksesuarlar</a></li>
+                    <li><a href="/src/pages/blog/index.html">Bloq</a></li>
+                </ul>
+                <div class="language">
+                    <p>Dil</p>
+                    <div id="select-buttons">
+                        <button class="active">
+                            <p>Az</p>
+                        </button>
+                        <button>
+                            <p>Rus</p>
+                        </button>
+                        <button>
+                            <p>İng</p>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div id="searchDiv">
+            <div id="search">
+                <img src="/src/assets/image/nav/search.png" alt="err">
+                <input id="input" type="text" placeholder="Axtar">
+                <img id="closeSearch" src="/src/assets/image/nav/x.png" alt="err">
+            </div>
+        </div>
+    </nav>
+
+
     <div class="container">
-        <h1>Search Results</h1>
+        <div class="location">
+            <p class="homePage">Ana Səhifə</p>
+            <img src="/src/assets/image/home/caretRight.png" alt="err">
+            <p class="page">Axtarış nəticəsi</p>
+        </div>
+
+        <div class="pageHead">
+            <h4 id="searchName"></h4>
+            <div class="filtersResult">
+                <div id="resultButtons">
+                    <button><span>Hamısı</span>
+                        <div class="lineBtn"></div>
+                    </button>
+                    <button><span>Yeni</span>
+                        <div class="lineBtn"></div>
+                    </button>
+                    <button><span>Sürülmüş</span></button>
+                </div>
+                <select name="" id="">
+                    <option value="">Tarixe gore</option>
+                </select>
+            </div>
+        </div>
+
         <div id="resultContainer">
         </div>
-      </div>
+
+        <button id="readResultBtn">Daha çox göstər</button>
+
+
+
+        <div class="foot">
+            <div id="footCards">
+            </div>
+            <a href="">Daha çox</a>
+        </div>
+    </div>
+
+    </div>
+
+
+
+    <footer>
+        <div class="footer-head">
+            <div class="main">
+                <img class="logo" src="/src/assets/image/footer/logo.png" alt="err">
+                <div class="icons">
+                    <div class='icon'>
+                        <a href="https://x.com/"> <img src="/src/assets/image/footer/x.png" alt="err"></a>
+                    </div>
+                    <div class='icon'>
+                        <a href="https://www.tiktok.com/"> <img src="/src/assets/image/footer/tiktok.png" alt="err"></a>
+                    </div>
+                    <div class='icon'>
+                        <a href="https://www.instagram.com/"><img src="/src/assets/image/footer/instagram.png"
+                                alt="err"></a>
+                    </div>
+                    <div class='icon'>
+                        <a href="https://www.facebook.com/"><img src="/src/assets/image/footer/facebook.png"
+                                alt="err"></a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="f-menu">
+                <ul>
+                    <li><a href="/src/pages/home/all/index.html">Bütün elanlar</a></li>
+                    <li><a href="/src/pages/home/all/index.html">Salonlar</a></li>
+                    <li><a href="/src/pages/home/all/index.html">Mağazalar</a></li>
+                </ul>
+                <ul>
+                    <li><a href="/src/pages/home/parts/index.html">Ehtiyat hissələri və aksesuarlar</a></li>
+                    <li><a href="/src/pages/home/all/index.html">Bloq</a></li>
+                    <li><a href="/src/pages/home/all/index.html">Qaydalar</a></li>
+                </ul>
+                <ul>
+                    <li><a href="/src/pages/home/parts/index.html">Qanun</a></li>
+                    <li><a href="/src/pages/home/all/index.html">İstifadəçi razılaşması</a></li>
+                    <li><a href="/src/pages/home/all/index.html">Məxfilik siyasəti</a></li>
+                </ul>
+            </div>
+
+            <div class="f-menuRes">
+                <ul>
+                    <li><a href="/src/pages/home/all/index.html">Bütün elanlar</a></li>
+                    <li><a href="/src/pages/home/all/index.html">Salonlar</a></li>
+                    <li><a href="/src/pages/home/all/index.html">Mağazalar</a></li>
+                    <li><a href="/src/pages/home/parts/index.html">Ehtiyat hissələri və aksesuarlar</a></li>
+                    <li><a href="/src/pages/home/all/index.html">Bloq</a></li>
+                    <li><a href="/src/pages/home/all/index.html">Qaydalar</a></li>
+                    <li><a href="/src/pages/home/parts/index.html">Qanun</a></li>
+                    <li><a href="/src/pages/home/all/index.html">İstifadəçi razılaşması</a></li>
+                    <li><a href="/src/pages/home/all/index.html">Məxfilik siyasəti</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-foot">
+            <div>
+                <p>Saytın Administrasiyası reklam bannerlərinin və yerləşdirilmiş elanların məzmununa görə məsuliyyət
+                    daşımır.
+                </p>
+                <p>2024 Digital Classified MMC. VÖEN 1546846</p>
+            </div>
+        </div>
+
+
+    </footer>
+
+
+
 </body>
+
 </html>
