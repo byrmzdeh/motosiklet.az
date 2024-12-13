@@ -3222,6 +3222,9 @@ footer .footer-foot div p {
     overflow: hidden;
     transition: height 0.3s ease, opacity 0.3s ease;
   }
+  .filter-main .main-show .selects-open .view {
+    width: 100%;
+  }
   .filter-main .main-showMoto {
     position: absolute;
     border-radius: 0px;

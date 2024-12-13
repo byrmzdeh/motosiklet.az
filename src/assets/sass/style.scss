@@ -3862,6 +3862,10 @@ footer {
                 opacity: 0;
                 overflow: hidden;
                 transition: height 0.3s ease, opacity 0.3s ease;
+                .view{
+                    width: 100%;
+                    
+                }
             }
         }
 
