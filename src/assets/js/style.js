@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const closeButton = document.getElementById('closeSearch');
   const inputSearch = document.getElementById('input');
   const searchName = document.getElementById('searchName');
-  const searchDiv = document.getElementById('searchDiv'); 
+  const searchDiv = document.getElementById('searchDiv');
   const resultContainerNull = document.getElementById('resultContainer')
   const readResultBtn = document.getElementById('readResultBtn')
   const resultButtons = document.querySelectorAll('#resultButtons button');
@@ -87,43 +87,43 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   const searchApi = '/src/data/all.json';
-  
+
   // Axtarış div-i açmaq
   searchButton.addEventListener('click', function (event) {
     event.stopPropagation();
     searchDiv.style.display = 'block';
   });
-  
+
   // Axtarış div-i bağlamaq
   closeButton.addEventListener('click', function () {
     searchDiv.style.display = 'none';
   });
-  
+
   // Input-da axtarış sorğusunu izləmək
   inputSearch.addEventListener('keydown', function (event) {
     if (event.key === 'Enter') {
-      const query = inputSearch.value.trim(); 
-  
+      const query = inputSearch.value.trim();
+
       if (query) {
         // Sorğunu localStorage-da saxla
         localStorage.setItem('searchQuery', query);
-  
+
         // Fetch ilə məlumatları API-dən əldə et
         fetch(searchApi)
           .then(response => response.json())
           .then((data) => {
             const results = data.filter(item => item.name && item.name.toLowerCase().includes(query.toLowerCase()));
-  
+
             // Nəticələri saxla və nəticələr səhifəsinə yönləndir
             if (results.length > 0) {
               localStorage.setItem('searchResults', JSON.stringify(results));
               window.location.href = '/src/pages/result/index.html';
-            } 
+            }
             else {
               confirm(`"${query}" üzrə axtarış nəticəsi tapılmadı`);
               searchName.textContent = `"${query}" üzrə axtarış nəticəsi tapılmadı`;
-              resultContainerNull.style.display='none'
-              readResultBtn.style.display='none'
+              resultContainerNull.style.display = 'none'
+              readResultBtn.style.display = 'none'
               filtersResult.style.display = 'none'; // "Read More" düyməsini gizlət
               resultButtons.forEach(button => button.style.display = 'none'); // Buttons gizlədilir
 
@@ -135,11 +135,11 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   });
-  
+
   // Input dəyişildikdə axtarış başlığını yenilə
   inputSearch.addEventListener('input', () => {
     const query = inputSearch.value.trim(); // Axtarış sorğusunu əldə edirik
-    
+
     if (query) {
       // Əgər axtarış sorğusu varsa
       searchName.textContent = `"${query}" üzrə axtarış nəticəsi`;
@@ -153,35 +153,35 @@ document.addEventListener('DOMContentLoaded', function () {
       filtersResult.style.display = 'none'; // "Read More" düyməsini gizlət
       resultButtons.forEach(button => button.style.display = 'none'); // Nəticə düymələrini gizlət
     }
-  
+
     // Əgər query boşdursa, searchName gizlədilsin
     if (query === '') {
       searchName.style.display = 'none'; // Başlıq gizlədilsin
     }
   });
-  
-  
 
 
-  
-  
-  
 
- ///Foot
- const footCards = document.getElementById('footCards');
- const footUrl = '/src/data/data.json';
 
- fetch(footUrl)
-   .then(res => res.json())
-   .then(data => {
-     function renderCards() {
-       let displayedData = data;
 
-       if (window.innerWidth >= 324 && window.innerWidth <= 768) {
-         displayedData = data.slice(0, 2); // Yalnız ilk 2 kart göstərilir
-       }
 
-       const cardsFoot = displayedData.map(item => `
+
+
+  ///Foot
+  const footCards = document.getElementById('footCards');
+  const footUrl = '/src/data/data.json';
+
+  fetch(footUrl)
+    .then(res => res.json())
+    .then(data => {
+      function renderCards() {
+        let displayedData = data;
+
+        if (window.innerWidth >= 324 && window.innerWidth <= 768) {
+          displayedData = data.slice(0, 2); // Yalnız ilk 2 kart göstərilir
+        }
+
+        const cardsFoot = displayedData.map(item => `
                      <div class='card'>
                          <ul>
                              <li>${item.title1}</li>
@@ -200,17 +200,17 @@ document.addEventListener('DOMContentLoaded', function () {
                      </div>
                  `).join('');
 
-       footCards.innerHTML = cardsFoot;
-     }
+        footCards.innerHTML = cardsFoot;
+      }
 
-     renderCards();
+      renderCards();
 
-     window.addEventListener('resize', renderCards);
-   })
-   .catch(err => {
-     console.error('Xəta baş verdi:', err);
-     footCards.innerHTML = '<p>Fayl yüklənmədi. Zəhmət olmasa, sonra yenidən cəhd edin.</p>';
-   });
+      window.addEventListener('resize', renderCards);
+    })
+    .catch(err => {
+      console.error('Xəta baş verdi:', err);
+      footCards.innerHTML = '<p>Fayl yüklənmədi. Zəhmət olmasa, sonra yenidən cəhd edin.</p>';
+    });
 
 
 
@@ -241,6 +241,19 @@ document.addEventListener('DOMContentLoaded', function () {
   const etrafli = document.getElementById('etrafli')
   const mainShow = document.querySelector('.main-show')
   const eBack = document.getElementById('eBack')
+  const clickSelect = document.querySelector('.clickSelect')
+  const mainShowPrice = document.querySelector('.main-showPrice')
+  const eFilter = document.getElementById('eFilter')
+
+
+  clickSelect.addEventListener('click', function () {
+    mainShowPrice.style.display = 'flex'
+  })
+
+  eFilter.addEventListener('click', function () {
+    mainShowPrice.style.display = 'none'
+  })
+
 
   etrafli.addEventListener('click', function () {
     mainShow.style.display = 'flex'
@@ -329,6 +342,54 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // Klik olunan düyməyə 'mactive' sinfi əlavə edirik
       this.classList.add('mactive');
+    });
+  });
+
+
+
+  const buttonsPrice = document.querySelectorAll('#buttons-price button');
+
+  buttonsPrice[0].classList.add('active');
+
+  // Başlanğıcda birinci düymənin 'lineBtn' elementini gizləyirik
+  const firstButtonLinePrice = buttonsPrice[0].querySelector('.lineBtn');
+  if (firstButtonLinePrice) {
+    firstButtonLinePrice.style.display = 'none';
+  }
+
+  buttonsPrice.forEach((button, index) => {
+    button.addEventListener('click', function () {
+      buttonsPrice.forEach(btn => btn.classList.remove('active'));
+
+      buttonsPrice.forEach(btn => {
+        const line = btn.querySelector('.lineBtn');
+        if (line) {
+          if (btn === this) {
+            line.style.display = 'none';
+          } else {
+            line.style.display = 'block';
+          }
+        }
+      });
+
+      if (index === 2) {
+        const secondButtonLinePrice = buttonsPrice[1].querySelector('.lineBtn');
+        if (secondButtonLinePrice) {
+          secondButtonLinePrice.style.display = 'none';
+        }
+      }
+
+
+      if (index === 1) {
+        const oneButtonLinePrice = buttonsPrice[0].querySelector('.lineBtn');
+        const secondButtonLinePrice = buttonsPrice[1].querySelector('.lineBtn');
+        if (secondButtonLinePrice, oneButtonLinePrice) {
+          oneButtonLinePrice.style.display = 'none';
+          secondButtonLinePrice.style.display = 'none';
+        }
+      }
+
+      this.classList.add('active');
     });
   });
 

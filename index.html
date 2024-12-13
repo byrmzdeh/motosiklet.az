@@ -151,7 +151,7 @@
         <p>Ətraflı axtarış</p>
       </button>
     </div>
-    
+
     <div class="main-show">
 
       <div class="back">
@@ -159,11 +159,15 @@
         <p>Ətraflı axtarış</p>
       </div>
 
-  
+
       <div class="filter-buttons">
         <div id="buttons-one">
-          <button><span>Hamısı</span><div class="lineBtn"></div></button>
-          <button><span>Yeni</span><div class="lineBtn"></div></button>
+          <button><span>Hamısı</span>
+            <div class="lineBtn"></div>
+          </button>
+          <button><span>Yeni</span>
+            <div class="lineBtn"></div>
+          </button>
           <button><span>Sürülmüş</span></button>
         </div>
         <div id="buttons-two">
@@ -179,7 +183,7 @@
         <div class="view">
           <p>Şəhər</p>
           <select>
-            <option value="">Hamisi</option>
+            <option value="">Hamısı</option>
             <option value="">A</option>
             <option value="">A</option>
             <option value="">A</option>
@@ -190,7 +194,7 @@
         <div class="view">
           <p>Marka</p>
           <select>
-            <option value="">Hamisi</option>
+            <option value="">Hamısı</option>
             <option value="">A</option>
             <option value="">A</option>
             <option value="">A</option>
@@ -200,7 +204,7 @@
         <div class="view">
           <p>Model</p>
           <select>
-            <option value="">Hamisi</option>
+            <option value="">Hamısı</option>
             <option value="">A</option>
             <option value="">A</option>
             <option value="">A</option>
@@ -229,23 +233,27 @@
         <div class="view">
           <p>Qiymət</p>
           <div class="three-select">
-            <select>
+            <select class="noView">
               <option value="">AZN</option>
               <option value="">A</option>
               <option value="">A</option>
               <option value="">A</option>
             </select>
-            <select>
+            <select class="noView">
               <option value="">Max</option>
               <option value="">A</option>
               <option value="">A</option>
               <option value="">A</option>
             </select>
-            <select>
+            <select class="noView">
               <option value="">Max</option>
               <option value="">A</option>
               <option value="">A</option>
               <option value="">A</option>
+            </select>
+
+            <select class="clickSelect">
+              <option value="">Qiymət,AZN</option>
             </select>
           </div>
         </div>
@@ -314,7 +322,7 @@
         <div class="view">
           <p>Sürətlər qutusu</p>
           <select>
-            <option value="">Hamisi</option>
+            <option value="">Hamısı</option>
             <option value="">A</option>
             <option value="">A</option>
             <option value="">A</option>
@@ -325,7 +333,7 @@
         <div class="view">
           <p>Yanacaq növü</p>
           <select>
-            <option value="">Hamisi</option>
+            <option value="">Hamısı</option>
             <option value="">A</option>
             <option value="">A</option>
             <option value="">A</option>
@@ -335,7 +343,7 @@
         <div class="view">
           <p>Rəng</p>
           <select>
-            <option value="">Hamisi</option>
+            <option value="">Hamısı</option>
             <option value="">A</option>
             <option value="">A</option>
             <option value="">A</option>
@@ -345,7 +353,7 @@
         <div class="view">
           <p>Ötürücü</p>
           <select>
-            <option value="">Hamisi</option>
+            <option value="">Hamısı</option>
             <option value="">A</option>
             <option value="">A</option>
             <option value="">A</option>
@@ -356,7 +364,7 @@
         <div class="view">
           <p>Gömrük</p>
           <select>
-            <option value="">Hamisi</option>
+            <option value="">Hamısı</option>
             <option value="">A</option>
             <option value="">A</option>
             <option value="">A</option>
@@ -367,7 +375,7 @@
         <div class="view">
           <p>Zədə</p>
           <select>
-            <option value="">Hamisi</option>
+            <option value="">Hamısı</option>
             <option value="">A</option>
             <option value="">A</option>
             <option value="">A</option>
@@ -411,11 +419,16 @@
 
       <div class="readMore">
         <div class="today">
-          <p>Bu gün</p>
-          <span class="day">156 gün</span>
+          <div class="this">
+            <p>Bu gün</p>
+            <span class="day">156 gün</span>
+          </div>
+          <p class="zero">Sıfırla</p>
         </div>
+
         <div class="more-filter">
           <p class="zero">Sıfırla</p>
+
           <button id="more">Daha çox filter</button>
           <button class="search">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -438,14 +451,46 @@
       </div>
 
 
-    <div class="buttonsMoto">
-      <button>Hamısı</button>
-      <button>Kvadrosikl (25)</button>
-      <button>Moped (56)</button>
-      <button>Motosiklet (320)</button>
-     
+      <div class="buttonsMoto">
+        <button>Hamısı</button>
+        <button>Kvadrosikl (25)</button>
+        <button>Moped (56)</button>
+        <button>Motosiklet (320)</button>
+
+      </div>
+
+
     </div>
-  
+
+    <div class="main-showPrice">
+
+      <div class="back">
+        <img id="eFilter" src="/src/assets/image/filter/back.png" alt="err">
+        <p>Qiymət</p>
+      </div>
+
+
+      <div id="buttons-price">
+        <button><span>AZN</span>
+          <div class="lineBtn"></div>
+        </button>
+        <button><span>USD</span>
+          <div class="lineBtn"></div>
+        </button>
+        <button><span>EUR</span></button>
+      </div>
+
+      <div class="price">
+        <span>Qiymət</span>
+        <div class="inputs">
+          <input type="text" placeholder="Min">
+          <input type="text" placeholder="Max">
+        </div>
+      </div>
+
+
+
+
 
     </div>
 
