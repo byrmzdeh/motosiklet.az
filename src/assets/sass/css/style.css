@@ -625,6 +625,7 @@ nav #searchDiv #search #closeSearch {
   gap: 8px;
 }
 .filter-main .main-show .selects-view .view .clickSelect {
+  width: 100%;
   display: none;
   cursor: pointer;
 }
@@ -1068,6 +1069,7 @@ nav #searchDiv #search #closeSearch {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
+  font-family: Inter;
 }
 .filter-main .main-showPrice .price .inputs input {
   width: 100%;
@@ -1076,6 +1078,7 @@ nav #searchDiv #search #closeSearch {
   outline: none;
   border-radius: 6px;
   border: 1px solid var(--Primitives-Stroke-Neutral-Accent, #DADDDA);
+  font-family: Inter;
 }
 .filter-main .main-showPrice .price .inputs input::placeholder {
   color: var(--Color-Neutral-500, #787F78);
@@ -3210,12 +3213,24 @@ footer .footer-foot div p {
     display: none;
   }
   .filter-main .main-show .selects-view .view .three-select .clickSelect {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 6px;
+    border: 1px solid var(--Primitives-Stroke-Neutral-Accent, #DADDDA);
+    background-color: white;
+    height: 44px;
+    padding: 5px 5px 5px 10px;
+  }
+  .filter-main .main-show .selects-view .view .three-select .clickSelect img {
+    width: 13px;
+    height: 13px;
+    font-weight: bolder;
   }
   .filter-main .main-show .selects-open {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 16px;
     height: 0px;
     opacity: 0;
@@ -3223,6 +3238,11 @@ footer .footer-foot div p {
     transition: height 0.3s ease, opacity 0.3s ease;
   }
   .filter-main .main-show .selects-open .view {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .filter-main .main-show .selects-open .view select {
     width: 100%;
   }
   .filter-main .main-showMoto {
@@ -3619,14 +3639,12 @@ footer .footer-foot div p {
     padding: 10px 40px;
     top: 0px;
     z-index: 6;
-    background-color: yellow;
     display: none;
   }
   .filter-main .main-show .filter-buttons #buttons-two {
     display: none;
   }
   .filter-main .main-show .selects-view {
-    background-color: rebeccapurple;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     top: 0px;

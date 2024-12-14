@@ -766,6 +766,7 @@ nav {
                 gap: 8px;
 
                 .clickSelect {
+                    width: 100%;
                     display: none;
                     cursor: pointer;
                 }
@@ -1273,6 +1274,8 @@ nav {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 gap: 10px;
+                font-family: Inter;
+
 
                 input {
                     width: 100%;
@@ -1281,6 +1284,7 @@ nav {
                     outline: none;
                     border-radius: 6px;
                     border: 1px solid var(--Primitives-Stroke-Neutral-Accent, #DADDDA);
+                    font-family: Inter;
 
                     &::placeholder {
                         color: var(--Color-Neutral-500, #787F78);
@@ -3845,7 +3849,20 @@ footer {
                         }
 
                         .clickSelect {
-                            display: block;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            border-radius: 6px;
+                            border: 1px solid var(--Primitives-Stroke-Neutral-Accent, #DADDDA);
+                            background-color: white;
+                            height: 44px;
+                            padding:  5px 5px 5px 10px;
+
+                            img {
+                                width: 13px;
+                                height: 13px;
+                                font-weight: bolder;
+                            }
                         }
                     }
                 }
@@ -3856,15 +3873,22 @@ footer {
             .selects-open {
                 width: 100%;
                 display: grid;
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(1, 1fr);
                 gap: 16px;
                 height: 0px;
                 opacity: 0;
                 overflow: hidden;
                 transition: height 0.3s ease, opacity 0.3s ease;
-                .view{
+
+                .view {
                     width: 100%;
-                    
+                    display: flex;
+                    flex-direction: column;
+
+                    select {
+                        width: 100%;
+                    }
+
                 }
             }
         }
@@ -4435,7 +4459,6 @@ footer {
             padding: 10px 40px;
             top: 0px;
             z-index: 6;
-            background-color: yellow;
             display: none;
 
 
@@ -4447,7 +4470,6 @@ footer {
             }
 
             .selects-view {
-                background-color: rebeccapurple;
                 display: grid;
                 grid-template-columns: repeat(1, 1fr);
                 top: 0px;
